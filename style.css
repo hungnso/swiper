@@ -147,16 +147,16 @@ img {
 
 /* Active thumbnail */
 .swiper-slide-active .gallery__thumbnail {
-	/* transform: translateY(-1.25rem) scale(1.2); */
+	transform: translateY(-1.25rem) scale(1.2);
 }
 
 /* Rotate thumbnail */
 .swiper-slide-next .gallery__thumbnail {
-	/* transform: rotate(15deg); */
+	transform: rotate(15deg);
 }
 
 .swiper-slide-prev .gallery__thumbnail {
-	/* transform: rotate(-15deg); */
+	transform: rotate(-15deg);
 }
 
 /* Sliding numbers */
