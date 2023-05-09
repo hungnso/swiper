@@ -2,17 +2,10 @@
 const swiperCards = new Swiper(".gallery-cards", {
 	loop: true,
 	loopedSlides: 5,
-	cssMode: true,
-	effect: "fade"
-});
-
-let swiperThumbs = new Swiper(".gallery-thumbs", {
-	loop: true,
-	loopedSlides: 5,
 	slidesPerView: 3,
-	centeredSlides: true,
+	cssMode: true,
+	effect: "fade",
 	slideToClickedSlide: true,
-
 	pagination: {
 		el: ".swiper-pagination",
 		type: "fraction"
@@ -23,4 +16,10 @@ let swiperThumbs = new Swiper(".gallery-thumbs", {
 	}
 });
 
-swiperThumbs.controller.control = swiperCards;
+let swiperThumbs = new Swiper(".gallery-thumbs", {
+	
+     
+      slidesPerView: 5,
+});
+
+// swiperThumbs.controller.control = swiperCards;

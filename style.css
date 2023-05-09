@@ -46,7 +46,7 @@ img {
 .gallery {
 	height: 100vh;
 	display: grid;
-	align-content: center;
+	/* align-content: center; */
 	justify-content: center;
 }
 
@@ -130,7 +130,7 @@ img {
 /* Swiper class */
 .gallery-cards,
 .gallery-thumbs {
-	width: 260px;
+	width: 428px;
 }
 
 .gallery-cards:hover .gallery__img {
@@ -152,11 +152,11 @@ img {
 
 /* Rotate thumbnail */
 .swiper-slide-next .gallery__thumbnail {
-	transform: rotate(15deg);
+	/* transform: rotate(15deg); */
 }
 
 .swiper-slide-prev .gallery__thumbnail {
-	transform: rotate(-15deg);
+	/* transform: rotate(-15deg); */
 }
 
 /* Sliding numbers */
@@ -183,12 +183,12 @@ img {
 
 .swiper-button-next {
 	right: -1.5rem;
-	transform: rotate(15deg);
+	/* transform: rotate(15deg); */
 }
 
 .swiper-button-prev {
 	left: -1.5rem;
-	transform: rotate(-15deg);
+	/* transform: rotate(-15deg); */
 }
 
 /* Other swiper settings */
@@ -227,6 +227,6 @@ img {
 	}
 	.gallery-cards,
 	.gallery-thumbs {
-		width: 280px;
+		width: 428px;
 	}
 }
