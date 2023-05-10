@@ -23,6 +23,7 @@ let swiperThumbs = new Swiper(".swiper-list", {
 const buttonShow = document.querySelector('.gallery-thumbs')
 const detail = document.querySelector('.gallery__overflow')
 let screenWidth = window.innerWidth
+let screenHeight = window.innerHeight
 console.log(screenWidth)
 function handleShowDetail(event) {
 	// detail.style.bottom = '55%'
@@ -53,23 +54,24 @@ buttonShow.addEventListener('touchmove', function(event) {
 	if (Math.abs(diffX) > Math.abs(diffY)) {
 	  if (diffX > 0) {
 		// Vuốt sang trái
-		console.log("Vuốt sang trái");
 	  } else {
 		// Vuốt sang phải
-		console.log("Vuốt sang phải");
 	  }
 	} else {
 	  if (diffY > 0) {
 		// Vuốt lên
-		console.log("Vuốt lên");
 		detail.style.bottom = '55%'
 		if(screenWidth <= 390){
 		detail.style.bottom = '64%'
 	} 
 	  } else {
 		// Vuốt xuống
-		console.log("Vuốt xuống");
 		detail.style.bottom = '0%'
+
+		if(screenHeight <= 700){
+			detail.style.bottom = '7%'
+
+		}
 	  }
 	}
   
