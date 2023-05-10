@@ -20,7 +20,7 @@ let swiperThumbs = new Swiper(".swiper-list", {
 	
       slidesPerView: 5,
 });
-const buttonShow = document.querySelector('.show-wrapper')
+const buttonShow = document.querySelector('.test-touch')
 const detail = document.querySelector('.gallery__overflow')
 let screenWidth = window.innerWidth
 let screenHeight = window.innerHeight
