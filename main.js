@@ -65,7 +65,7 @@ buttonShow.addEventListener('touchmove', function(event) {
 		detail.style.bottom = '55%'
 		if(screenWidth <= 390){
 		detail.style.bottom = '64%'
-	``} 
+	} 
 	  } else {
 		// Vuốt xuống
 		console.log("Vuốt xuống");
