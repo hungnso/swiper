@@ -58,12 +58,35 @@ buttonShow.addEventListener('touchmove', function(event) {
 		// Vuốt sang phải
 	  }
 	} else {
+		let setBottom = '55%'
 	  if (diffY > 0) {
+		console.log(screenHeight)
+		switch (!!screenHeight) {
+			case screenHeight <= 600:
+				setBottom = '69%'
+				break;
+			case screenHeight <= 650:
+				setBottom = '66.5%'
+				break;
+			case screenHeight <= 700:
+				setBottom = '64%'
+				break;
+			case screenHeight <= 750:
+				setBottom = '61%'
+				break;
+			case screenHeight <= 800:
+				setBottom = '58.5%'
+				break;
+			
+		
+			default:
+				break;
+		}
 		// Vuốt lên
-		detail.style.bottom = '55%'
-		if(screenWidth <= 390){
-		detail.style.bottom = '64%'
-	} 
+		detail.style.bottom = setBottom
+	// 	if(screenWidth <= 390){
+	// 	detail.style.bottom = setBottom
+	// } 
 	  } else {
 		// Vuốt xuống
 		detail.style.bottom = '0%'
