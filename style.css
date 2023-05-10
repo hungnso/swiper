@@ -114,10 +114,11 @@ img {
 .gallery-thumbs, .gallery-detail {
 	max-width: 428px;
 	height: 100%;
-	padding: 15px 0px 15px 16px;
+	padding: 15px 15px 15px 16px;
 	overflow-y: hidden;
 	background: #FFFFFF;
 	border-radius: 36px 36px 0px 0px;
+	position: relative;
 }
 
 .list-color{
@@ -136,6 +137,13 @@ img {
 	border-radius: 50%;
 	margin-right: 20px;
 
+
+}
+.info-wrapper{
+	max-height: 291px;
+    overflow-y: scroll;
+}
+.btn-wrapper{
 
 }
 /* Active thumbnail */
@@ -244,7 +252,7 @@ img {
 }
 @media screen and (max-width: 400px) {
 	.gallery-thumbs{
-		padding-left: 30px;
+		padding: 0 30px ;
 	}
 }
 @media screen and (max-width: 380px) {
