@@ -20,23 +20,62 @@ let swiperThumbs = new Swiper(".swiper-list", {
 	
       slidesPerView: 5,
 });
-const buttonShow = document.querySelector('.show-detail')
+const buttonShow = document.querySelector('.show-wrapper')
 const detail = document.querySelector('.gallery__overflow')
 let screenWidth = window.innerWidth
 console.log(screenWidth)
-function handleShowDetail() {
-	console.log('Button đã được click!');
-	detail.style.bottom = '55%'
-	if(screenWidth < 390){
-		detail.style.bottom = '65%'
-	} 
+function handleShowDetail(event) {
+	// detail.style.bottom = '55%'
+	// if(screenWidth <= 390){
+	// 	detail.style.bottom = '64%'
+	// } 
 	
 	// Các hành động khác bạn muốn thực hiện khi button được click
   }
 
 
-buttonShow.addEventListener('click', handleShowDetail)
-
+// buttonShow.addEventListener('touchmove', handleShowDetail(value))
+buttonShow.addEventListener('touchstart', function(event) {
+	initialX = event.touches[0].clientX;
+	initialY = event.touches[0].clientY;
+  });
+buttonShow.addEventListener('touchmove', function(event) {
+	if (!initialX || !initialY) {
+	  return;
+	}
+  
+	var currentX = event.touches[0].clientX;
+	var currentY = event.touches[0].clientY;
+	var diffX = initialX - currentX;
+	var diffY = initialY - currentY;
+  
+	// Xác định hướng vuốt (ngang hay dọc)
+	if (Math.abs(diffX) > Math.abs(diffY)) {
+	  if (diffX > 0) {
+		// Vuốt sang trái
+		console.log("Vuốt sang trái");
+	  } else {
+		// Vuốt sang phải
+		console.log("Vuốt sang phải");
+	  }
+	} else {
+	  if (diffY > 0) {
+		// Vuốt lên
+		console.log("Vuốt lên");
+		detail.style.bottom = '55%'
+		if(screenWidth <= 390){
+		detail.style.bottom = '64%'
+	``} 
+	  } else {
+		// Vuốt xuống
+		console.log("Vuốt xuống");
+		detail.style.bottom = '0%'
+	  }
+	}
+  
+	initialX = null;
+	initialY = null;
+  });
 // swiperThumbs.controller.control = swiperCards;
 
 /// Danh sách các filter 
