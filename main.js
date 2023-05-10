@@ -22,20 +22,12 @@ let swiperThumbs = new Swiper(".swiper-list", {
 });
 const buttonShow = document.querySelector('.test-touch')
 const detail = document.querySelector('.gallery__overflow')
+const desc = document.querySelector('.info-wrapper')
+const btn = document.querySelector('.btn-wrapper')
 let screenWidth = window.innerWidth
 let screenHeight = window.innerHeight
-console.log(screenWidth)
-function handleShowDetail(event) {
-	// detail.style.bottom = '55%'
-	// if(screenWidth <= 390){
-	// 	detail.style.bottom = '64%'
-	// } 
-	
-	// Các hành động khác bạn muốn thực hiện khi button được click
-  }
 
 
-// buttonShow.addEventListener('touchmove', handleShowDetail(value))
 buttonShow.addEventListener('touchstart', function(event) {
 	initialX = event.touches[0].clientX;
 	initialY = event.touches[0].clientY;
@@ -60,41 +52,18 @@ buttonShow.addEventListener('touchmove', function(event) {
 	} else {
 		let setBottom = '55%'
 	  if (diffY > 0) {
-		console.log(screenHeight)
-		switch (!!screenHeight) {
-			case screenHeight <= 600:
-				setBottom = '69%'
-				break;
-			case screenHeight <= 650:
-				setBottom = '66.5%'
-				break;
-			case screenHeight <= 700:
-				setBottom = '64%'
-				break;
-			case screenHeight <= 750:
-				setBottom = '61%'
-				break;
-			case screenHeight <= 800:
-				setBottom = '58.5%'
-				break;
-			
-		
-			default:
-				break;
-		}
+
 		// Vuốt lên
-		detail.style.bottom = setBottom
-	// 	if(screenWidth <= 390){
-	// 	detail.style.bottom = setBottom
-	// } 
+		detail.style.transform = 'translateY(-50%)'
+		desc.style.display = 'block'
+		btn.style.display = 'block'
+	
 	  } else {
-		// Vuốt xuống
-		detail.style.bottom = '0%'
-
-		if(screenHeight <= 700){
-			detail.style.bottom = '3%'
-
-		}
+		
+		detail.style.transform = 'translateY(0%)'
+		desc.style.display = 'none'
+		btn.style.display = 'none'
+		
 	  }
 	}
   
