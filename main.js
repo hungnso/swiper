@@ -69,7 +69,7 @@ buttonShow.addEventListener('touchmove', function(event) {
 		detail.style.bottom = '0%'
 
 		if(screenHeight <= 700){
-			detail.style.bottom = '7%'
+			detail.style.bottom = '3%'
 
 		}
 	  }
