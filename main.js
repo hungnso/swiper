@@ -116,7 +116,7 @@ listFilter.forEach(item => {
 	  });
 
 })
-
+//// Danh sách item
 const listSlider = [
 	{
 		content: "https://images.unsplash.com/photo-1669671943625-e20799ee5f42?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzI0MjY3ODQ&ixlib=rb-4.0.3&q=80&w=400",
@@ -165,16 +165,64 @@ listSlider.forEach(item =>
 	listSliderContainer.innerHTML +=
 	`
 	<div class="swiper-slide">
-	<div class="gallery__thumbnail">
-	  <img
-		src="${item.content}"
-		alt="image gallery"
-		alt="image thumbnail"
-		class="gallery__thumbnail-img"
-	  />
-	</div>
+	<div>
+		<div class="gallery__thumbnail active-item">
+		<img
+			src="${item.content}"
+			alt="image gallery"
+			alt="image thumbnail"
+			class="gallery__thumbnail-img"
+		/>
+		</div>
+	<div>
   </div>
 	`
 	)
 
+
+
+/// Danh sách màu
+const listColor = [
+	{
+		color: "bg-dark",
+		active: true
+	},
+	{
+		color: "bg-success",
+		active: false
+	},
+	{
+		color: "bg-danger",
+		active: false
+	},
+	{
+		color: "bg-secondary",
+		active: false
+	},
+]
+const listColorContainer = document.querySelector('.list-color')
+listColor.forEach(item => {
+	const colorItem = document.createElement('div')
+	colorItem.classList.add(`${item.color}`, 'color-item')
+	if(item.active){
+		colorItem.classList.add('active-color')
+	}
+	listColorContainer.appendChild(colorItem)
+	colorItem.addEventListener('click', () => {
+		// Hủy bỏ lớp active-filter của các phần tử khác
+		listColor.forEach(otherItem => {
+		  if (otherItem !== item) {
+			otherItem.active = false;
+			const otherColerItem = listColorContainer.querySelector(`:scope >  .color-item:nth-child(${listColor.indexOf(otherItem) + 1})`);
+			otherColerItem.classList.remove('active-color');
+		  }
+		});
+	
+		// Kích hoạt mục được nhấp chuột và cập nhật trạng thái active
+		item.active = true;
+		colorItem.classList.add('active-color');
+	
+		// Xử lý sự kiện click tại đây
+	  });
+})
 // const test = document.querySelector('.gallery__overflow')
