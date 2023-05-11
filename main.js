@@ -9,9 +9,10 @@ const swiperCards = new Swiper(".gallery-cards", {
 });
 
 let swiperThumbs = new Swiper(".swiper-list", {
-      slidesPerView: 5,
-	  loopedSlides: 1,
-	  loop: true,
+	loop: true,
+    slidesPerView: 5,
+	// loopedSlides: 1,
+	 
 
 });
 const buttonShow = document.querySelector('.test-touch')
