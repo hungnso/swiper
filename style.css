@@ -52,7 +52,7 @@ img {
 	overflow-x: hidden;
 	/* align-content: center; */
 	justify-content: center;
-	background-color: rebeccapurple
+	background-color: rebeccapurple;
 }
 
 
@@ -61,7 +61,7 @@ img {
 .gallery__overflow {
 	height: 650px;
 	transition: transform 0.3s ease-in-out;
-	/* transform: translateY(-50%); */
+	transform: translateY(-5%);
 	
 	
 }
@@ -218,7 +218,11 @@ img {
     font-weight: 500;
 	font-size: 16px;
 	color: #A3A3A3;
+	transition: transform 0.3s;
 }
+.filter-item.active-filter {
+	transform: scale(1.2);
+  }
 .active-filter{
 	background: #FFEBDF;
 	border-radius: 24px;

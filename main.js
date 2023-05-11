@@ -5,20 +5,14 @@ const swiperCards = new Swiper(".gallery-cards", {
 	slidesPerView: 3,
 	cssMode: true,
 	effect: "fade",
-	slideToClickedSlide: true,
-	pagination: {
-		el: ".swiper-pagination",
-		type: "fraction"
-	},
-	navigation: {
-		nextEl: ".swiper-button-next",
-		prevEl: ".swiper-button-prev"
-	}
+	
 });
 
 let swiperThumbs = new Swiper(".swiper-list", {
-	
       slidesPerView: 5,
+	  loopedSlides: 1,
+	  loop: true,
+
 });
 const buttonShow = document.querySelector('.test-touch')
 const detail = document.querySelector('.gallery__overflow')
@@ -60,7 +54,7 @@ buttonShow.addEventListener('touchmove', function(event) {
 	
 	  } else {
 		
-		detail.style.transform = 'translateY(0%)'
+		detail.style.transform = 'translateY(-5%)'
 		desc.style.display = 'none'
 		btn.style.display = 'none'
 		
@@ -102,6 +96,84 @@ listFilter.forEach(item => {
 	}
 	filterItem.textContent = item.name
 	listFilterContainer.appendChild(filterItem)
+	filterItem.addEventListener('click', () => {
+		// Hủy bỏ lớp active-filter của các phần tử khác
+		listFilter.forEach(otherItem => {
+		  if (otherItem !== item) {
+			otherItem.active = false;
+			const otherFilterItem = listFilterContainer.querySelector(`:scope > .filter-item:nth-child(${listFilter.indexOf(otherItem) + 1})`);
+			otherFilterItem.classList.remove('active-filter');
+		  }
+		});
+	
+		// Kích hoạt mục được nhấp chuột và cập nhật trạng thái active
+		item.active = true;
+		filterItem.classList.add('active-filter');
+	
+		// Xử lý sự kiện click tại đây
+		console.log('Clicked:', item.name);
+	  });
 
 })
+
+const listSlider = [
+	{
+		content: "https://images.unsplash.com/photo-1669671943625-e20799ee5f42?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzI0MjY3ODQ&ixlib=rb-4.0.3&q=80&w=400",
+		active: false
+	},
+	{
+		content: "https://images.unsplash.com/photo-1670832215724-cce6d9ee619c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzI0MjY3ODQ&ixlib=rb-4.0.3&q=80&w=400",
+		active: false
+	},
+	{
+		content: "https://images.unsplash.com/photo-1670509684960-101c061c9c5c?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzI0MjY4MzU&ixlib=rb-4.0.3&q=80",
+		active: false
+	},
+	{
+		content: "https://images.unsplash.com/photo-1670825372656-af0361b7425a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzI0MjY4MzU&ixlib=rb-4.0.3&q=80&w=400",
+		active: false
+	},
+	{
+		content: "https://images.unsplash.com/photo-1631551221192-7804e1600435?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80",
+		active: false
+	},
+	{
+		content: "https://images.unsplash.com/photo-1664880650290-e861f5d71c92?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80",
+		active: false
+	},
+	{
+		content: "https://images.unsplash.com/photo-1669671943625-e20799ee5f42?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzI0MjY3ODQ&ixlib=rb-4.0.3&q=80&w=400",
+		active: false
+	},
+	{
+		content: "https://images.unsplash.com/photo-1669671943625-e20799ee5f42?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzI0MjY3ODQ&ixlib=rb-4.0.3&q=80&w=400",
+		active: false
+	},
+	{
+		content: "https://images.unsplash.com/photo-1669671943625-e20799ee5f42?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzI0MjY3ODQ&ixlib=rb-4.0.3&q=80&w=400",
+		active: false
+	},
+	{
+		content: "https://images.unsplash.com/photo-1669671943625-e20799ee5f42?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzI0MjY3ODQ&ixlib=rb-4.0.3&q=80&w=400",
+		active: false
+	},
+]
+
+const listSliderContainer =  document.querySelector('.swiper-wrapper')
+listSlider.forEach(item =>
+	listSliderContainer.innerHTML +=
+	`
+	<div class="swiper-slide">
+	<div class="gallery__thumbnail">
+	  <img
+		src="${item.content}"
+		alt="image gallery"
+		alt="image thumbnail"
+		class="gallery__thumbnail-img"
+	  />
+	</div>
+  </div>
+	`
+	)
+
 // const test = document.querySelector('.gallery__overflow')
