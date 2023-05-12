@@ -23,6 +23,8 @@ const btn = document.querySelector('.btn-wrapper')
 const iconShop = document.querySelector('.shop-icon')
 let screenWidth = window.innerWidth
 let screenHeight = window.innerHeight
+let toolbarWidth = window.outerWidth - window.innerWidth;
+console.log(toolbarWidth)
 let dynamicHeight = 0
 
 /// set giá trị
