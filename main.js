@@ -1,7 +1,7 @@
 /*=============== SWIPER JS GALLERY ===============*/
 const swiperCards = new Swiper(".gallery-cards", {
 	loop: true,
-	loopedSlides: 5,
+	loopedSlides: 4.5,
 	slidesPerView: 3,
 	cssMode: true,
 	effect: "fade",
@@ -10,7 +10,7 @@ const swiperCards = new Swiper(".gallery-cards", {
 
 let swiperThumbs = new Swiper(".swiper-list", {
 	loop: true,
-    slidesPerView: 5,
+    slidesPerView: 4.5,
 	// loopedSlides: 1,
 	 
 
@@ -166,7 +166,7 @@ listSlider.forEach(item =>
 	`
 	<div class="swiper-slide">
 	<div>
-		<div class="gallery__thumbnail active-item">
+		<div class="gallery__thumbnail ">
 		<img
 			src="${item.content}"
 			alt="image gallery"

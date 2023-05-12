@@ -59,6 +59,7 @@ img {
 
 
 .gallery__overflow {
+	position: relative;
 	height: 650px;
 	transition: transform 0.3s ease-in-out;
 	transform: translateY(-5%);
@@ -68,14 +69,19 @@ img {
 
 .gallery__thumbnail {
 	position: relative;
-	width: 60px;
-	height: 60px;
+	width: 80px;
+	height: 80px;
 	border-radius: 50%;
 	overflow: hidden;
 	cursor: pointer;
 	margin-left: auto;
 	margin-right: auto;
 	transition: transform 0.3s;
+}
+.gallery__thumbnail-img{
+	width: 80px;
+	height: inherit;
+	object-fit: cover;
 }
 
 .gallery-overview{
@@ -150,7 +156,7 @@ img {
 }
 /* Active thumbnail */
 .swiper-slide-active .gallery__thumbnail {
-	transform: translateY(-1.25rem) scale(1.2);
+	/* transform: translateY(-1.25rem) scale(1.2); */
 }
 
 /* Rotate thumbnail */
