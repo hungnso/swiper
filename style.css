@@ -247,6 +247,7 @@ img {
 	font-size: 16px;
 	color: #A3A3A3;
 	transition: transform 0.3s;
+	margin-right: 4px;
 }
 .filter-item.active-filter {
 	transform: scale(1.2);

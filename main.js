@@ -114,6 +114,11 @@ document.addEventListener('DOMContentLoaded', function() {
 	  }
   }
 
+// Sự kiện load lại trang 
+const reloadButton = document.querySelector('.header-right');
+reloadButton.addEventListener('click', function() {
+	location.reload(); // Reloads the current page
+  });
 
 buttonShow.addEventListener('touchstart', function(event) {
 	initialX = event.touches[0].clientX;
@@ -160,10 +165,7 @@ buttonShow.addEventListener('touchmove', function(event) {
 	initialX = null;
 	initialY = null;
   });
-// swiperThumbs.controller.control = swiperCards;
 
-/// Danh sách các filter 
-// const listFilter = ['Collection', 'Material', 'Shape', 'Tags'];
 const listFilter = [
 	{
 	name: "Collection",
@@ -186,7 +188,7 @@ const listFilterContainer =  document.querySelector('.list-filter')
 
 listFilter.forEach(item => {
 	const filterItem = document.createElement('div')
-	filterItem.classList.add('filter-item', 'col-3', 'text-center')
+	filterItem.classList.add('filter-item', 'col-3', 'text-center', 'mr-1')
 	if(item.active){
 		filterItem.classList.add('active-filter')
 	}
