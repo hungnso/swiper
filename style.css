@@ -363,3 +363,9 @@ img {
 		max-width: 100vw;
 	}
 }
+
+@keyframes mymove {
+	from {translateY: 50%;}
+	50% {translateY: 25% !important;} /* ignored */
+	to {translateY: var(--dynamic-height)}
+  }
