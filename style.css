@@ -368,11 +368,15 @@ img {
 
   @keyframes slide-down {
 	0% {
-	  transform: translateY(-100%);
+	  transform: translateY(-55%);
 	}
 	
 	100% {
 	  transform: translateY(var(--dynamic-height));
+	  .info-wrapper{
+		display: none;
+	  }
+	 
 	}
   }
   @keyframes slide-up {
@@ -382,5 +386,6 @@ img {
 	
 	100% {
 	  transform: translateY(-55%);
+	 
 	}
   }
