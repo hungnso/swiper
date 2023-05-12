@@ -165,9 +165,10 @@ buttonShow.addEventListener('touchmove', function(event) {
 		setTimeout(() => {
 			desc.style.display = 'none'
 			btn.style.display = 'none'
-		}, 500);
-		
 		iconShop.style.display = 'block'
+
+		}, 400);
+		
 
 		
 	  }
