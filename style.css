@@ -47,7 +47,7 @@ img {
 
 /*=============== GALLERY ===============*/
 .gallery {
-	height: 80vh;
+	height: 85vh;
 	/* max-width: 426px; */
 	display: grid;
 	overflow-y: hidden;
