@@ -166,12 +166,10 @@ img {
 
 }
 .info-wrapper{
-	display: none;
 	height: 30%;
     overflow-y: scroll;
 }
 .btn-wrapper{
-	display: none;
 	position: absolute;
   	left: 50%;
   	transform: translateX(-50%);

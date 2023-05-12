@@ -148,8 +148,8 @@ buttonShow.addEventListener('touchmove', function(event) {
 
 		// Vuốt lên
 		detail.style.transform = 'translateY(-55%)'
-		desc.style.display = 'block'
-		btn.style.display = 'block',
+		desc.style.opacity = '1'
+			btn.style.opacity = '1'
 		iconShop.style.display = 'none'
 		detail.style.animation = ""
 		// detail.style.transition = 'transform 0.3s ease-in-out'
@@ -163,9 +163,9 @@ buttonShow.addEventListener('touchmove', function(event) {
 		detail.style.transition = ''
 		detail.style.animation = "slide-down 0.5s ease-in-out "
 		setTimeout(() => {
-			desc.style.display = 'none'
-			btn.style.display = 'none'
-		iconShop.style.display = 'block'
+			desc.style.opacity = '0'
+			btn.style.opacity = '0'
+		iconShop.style.opacity = '0'
 
 		}, 400);
 		
