@@ -147,14 +147,16 @@ buttonShow.addEventListener('touchmove', function(event) {
 	  if (diffY > 0) {
 
 		// Vuốt lên
-		detail.style.transform = 'translateY(-50%)'
+		detail.style.transform = 'translateY(-55%)'
 		desc.style.display = 'block'
 		btn.style.display = 'block',
 		iconShop.style.display = 'none'
+		detail.style.transition = 'transform 0.3s ease-in-out'
 		
 	
 	  } else {
 		detail.style.transform = `translateY(${dynamicHeight}px)`
+		detail.style.transition = 'transform 0.5s ease-in-out'
 		desc.style.display = 'none'
 		btn.style.display = 'none',
 		iconShop.style.display = 'block'
