@@ -80,7 +80,6 @@ document.addEventListener('DOMContentLoaded', function() {
 		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
 		  break;
 		case (screenHeight >= 700 && screenHeight < 750):
-		  
 		  dynamicHeight = -80
 		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
 		  break;
@@ -148,7 +147,7 @@ buttonShow.addEventListener('touchmove', function(event) {
 	  if (diffY > 0) {
 
 		// Vuốt lên
-		detail.style.transform = 'translateY(-50%)'
+		detail.style.transform = 'translateY(-55%)'
 		desc.style.display = 'block'
 		btn.style.display = 'block',
 		iconShop.style.display = 'none'
