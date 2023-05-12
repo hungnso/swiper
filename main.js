@@ -150,7 +150,7 @@ buttonShow.addEventListener('touchmove', function(event) {
 		detail.style.transform = 'translateY(-55%)'
 		desc.style.opacity = '1'
 			btn.style.opacity = '1'
-		iconShop.style.display = 'none'
+		iconShop.style.opacity = '0'
 		detail.style.animation = ""
 		// detail.style.transition = 'transform 0.3s ease-in-out'
 		detail.style.animation = "slide-up 0.5s ease-in-out "
@@ -165,9 +165,10 @@ buttonShow.addEventListener('touchmove', function(event) {
 		setTimeout(() => {
 			desc.style.opacity = '0'
 			btn.style.opacity = '0'
-		iconShop.style.opacity = '0'
+		
 
 		}, 400);
+		iconShop.style.opacity = '1'
 		
 
 		
