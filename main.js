@@ -22,6 +22,96 @@ const btn = document.querySelector('.btn-wrapper')
 const iconShop = document.querySelector('.shop-icon')
 let screenWidth = window.innerWidth
 let screenHeight = window.innerHeight
+let dynamicHeight = 0
+
+/// set giá trị
+
+/// Khi reszise
+window.addEventListener('resize', function() {
+	myFunction()
+  });
+
+/// Khi load lại trang
+document.addEventListener('DOMContentLoaded', function() {
+	// Hàm bạn muốn chạy khi trang web được tải vào trong
+	myFunction();
+  });
+  
+  function myFunction() {
+	
+	console.log(screenHeight)
+
+
+	// switch (!!screenHeight) {
+		
+	// 	case (screenHeight >=500 & screenHeight< 550 ):
+	// 		dynamicHeight = -120
+	// 		console.log(screenHeight)
+
+	// 		document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
+	
+	// 		break;
+	
+	// 	default:
+			
+	// 		break;
+	// }
+	switch (true) {
+		case (screenHeight >= 500 && screenHeight < 550):
+		  dynamicHeight = -120
+		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
+		  break;
+		case (screenHeight >= 550 && screenHeight < 600):
+		  
+		  dynamicHeight = -110
+		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
+		  break;
+		case (screenHeight >= 600 && screenHeight < 650):
+		  
+		  dynamicHeight = -100
+		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
+		  break;
+		case (screenHeight >= 650 && screenHeight < 700):
+		  
+		  dynamicHeight = -90
+		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
+		  break;
+		case (screenHeight >= 700 && screenHeight < 750):
+		  
+		  dynamicHeight = -80
+		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
+		  break;
+		case (screenHeight >= 750 && screenHeight < 800):
+		  
+		  dynamicHeight = -70
+		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
+		  break;
+		case (screenHeight >= 800 && screenHeight < 850):
+		  
+		  dynamicHeight = -60
+		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
+		  break;
+		case (screenHeight >= 850 && screenHeight < 900):
+		  
+		  dynamicHeight = -50
+		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
+		  break;
+		case (screenHeight >= 900 && screenHeight < 950):
+		  
+		  dynamicHeight = -40
+		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
+		  break;
+		case (screenHeight >= 950 && screenHeight < 1000):
+		  
+		  dynamicHeight = -30
+		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
+		  break;
+		default:
+		  console.log("Giá trị không khớp với bất kỳ trường hợp nào");
+		  
+		  break;
+	  }
+  }
 
 
 buttonShow.addEventListener('touchstart', function(event) {
@@ -57,8 +147,7 @@ buttonShow.addEventListener('touchmove', function(event) {
 		
 	
 	  } else {
-		
-		detail.style.transform = 'translateY(-5%)'
+		detail.style.transform = `translateY(${dynamicHeight}px)`
 		desc.style.display = 'none'
 		btn.style.display = 'none',
 		iconShop.style.display = 'block'
