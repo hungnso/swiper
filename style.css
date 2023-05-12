@@ -275,7 +275,7 @@ img {
 	font-size: 20px;
 }
 .test-touch{
-	height: 40%;
+	height: 35%;
 }
 
 /*=============== BREAKPOINTS ===============*/
@@ -294,6 +294,22 @@ img {
 @media screen and (max-width: 360px) {
 	.gallery-thumbs{
 		/* padding: 0 40px ; */
+	}
+}
+
+@media (min-height: 550px) and (max-height: 599px) {
+	.info-wrapper {
+		height: 28%;
+		overflow-y: scroll;
+	}
+}
+@media (min-height: 500px) and (max-height: 549px) {
+	.info-wrapper {
+		height: 25%;
+		overflow-y: scroll;
+	}
+	.test-touch{
+		
 	}
 }
 /* @media screen and (max-width: 380px) {

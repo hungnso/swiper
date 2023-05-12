@@ -11,6 +11,7 @@ const swiperCards = new Swiper(".gallery-cards", {
 let swiperThumbs = new Swiper(".swiper-list", {
 	loop: true,
     slidesPerView: 4.5,
+	spaceBetween: 30
 	// loopedSlides: 1,
 	 
 
