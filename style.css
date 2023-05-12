@@ -375,3 +375,12 @@ img {
 	  transform: translateY(var(--dynamic-height));
 	}
   }
+  @keyframes slide-up {
+	0% {
+	  transform: translateY(var(--dynamic-height));
+	}
+	
+	100% {
+	  transform: translateY(-55%);
+	}
+  }

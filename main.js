@@ -152,7 +152,9 @@ buttonShow.addEventListener('touchmove', function(event) {
 		btn.style.display = 'block',
 		iconShop.style.display = 'none'
 		detail.style.animation = ""
-		detail.style.transition = 'transform 0.3s ease-in-out'
+		// detail.style.transition = 'transform 0.3s ease-in-out'
+		detail.style.animation = "slide-up 0.5s ease-in-out "
+
 		
 	
 	  } else {
@@ -160,7 +162,7 @@ buttonShow.addEventListener('touchmove', function(event) {
 		detail.style.transform = `translateY(${dynamicHeight}px)`
 		// detail.style.transition = 'transform 0.5s ease-in-out'
 		detail.style.transition = ''
-		detail.style.animation = "slide-down 0.75s ease-in-out "
+		detail.style.animation = "slide-down 0.5s ease-in-out "
 		desc.style.display = 'none'
 		btn.style.display = 'none',
 		iconShop.style.display = 'block'
