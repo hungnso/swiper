@@ -19,6 +19,7 @@ const buttonShow = document.querySelector('.test-touch')
 const detail = document.querySelector('.gallery__overflow')
 const desc = document.querySelector('.info-wrapper')
 const btn = document.querySelector('.btn-wrapper')
+const iconShop = document.querySelector('.shop-icon')
 let screenWidth = window.innerWidth
 let screenHeight = window.innerHeight
 
@@ -51,13 +52,17 @@ buttonShow.addEventListener('touchmove', function(event) {
 		// Vuốt lên
 		detail.style.transform = 'translateY(-50%)'
 		desc.style.display = 'block'
-		btn.style.display = 'block'
+		btn.style.display = 'block',
+		iconShop.style.display = 'none'
+		
 	
 	  } else {
 		
 		detail.style.transform = 'translateY(-5%)'
 		desc.style.display = 'none'
-		btn.style.display = 'none'
+		btn.style.display = 'none',
+		iconShop.style.display = 'block'
+
 		
 	  }
 	}
