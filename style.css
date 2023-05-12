@@ -252,7 +252,7 @@ img {
 	margin-right: 4px;
 }
 .filter-item.active-filter {
-	transform: scale(1.2);
+	/* transform: scale(1.2); */
   }
 .active-filter{
 	background: #FFEBDF;
