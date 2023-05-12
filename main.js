@@ -156,7 +156,9 @@ buttonShow.addEventListener('touchmove', function(event) {
 	
 	  } else {
 		detail.style.transform = `translateY(${dynamicHeight}px)`
-		detail.style.transition = 'transform 0.5s ease-in-out'
+		// detail.style.transition = 'transform 0.5s ease-in-out'
+		detail.style.transition = ''
+		detail.style.animation = "slide-down 1s ease-in-out "
 		desc.style.display = 'none'
 		btn.style.display = 'none',
 		iconShop.style.display = 'block'

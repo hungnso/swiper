@@ -64,7 +64,7 @@ img {
 .gallery__overflow {
 	position: relative;
 	height: 100%;
-	transition: transform 0.3s ease-in-out;
+	/* transition: transform 1s ease-in-out; */
 	transform: translateY(var(--dynamic-height));
 	
 	
@@ -364,8 +364,13 @@ img {
 	}
 }
 
-@keyframes mymove {
-	from {translateY: 50%;}
-	50% {translateY: 25% !important;} /* ignored */
-	to {translateY: var(--dynamic-height)}
+
+
+  @keyframes slide-down {
+	0% {
+	  transform: translateY(-100%);
+	}
+	100% {
+	  transform: translateY(var(--dynamic-height));
+	}
   }
