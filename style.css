@@ -17,6 +17,10 @@
 	--small-font-size: 0.813rem;
 	--smaller-font-size: 0.75rem;
 	--dynamic-height: 0;
+	--bottom-action: 0;
+	--detail-height: 33%
+
+	
 }
 
 /* Responsive typography */
@@ -117,8 +121,8 @@ img {
 .overview-action{
 	position: absolute;
 	width: 100%;
-	height: calc(100% - 85%);
-	bottom: 100px
+	height: 95px;
+	bottom: var(--bottom-action)
 }
 .action-camera-wrapper{
 	width: 92px;
@@ -186,7 +190,7 @@ img {
 }
 .info-wrapper{
 	opacity: 0;
-	height: 33%;
+	height: var(--detail-height);
     overflow-y: scroll;
 }
 .btn-wrapper{
