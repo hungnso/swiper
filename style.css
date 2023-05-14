@@ -73,11 +73,16 @@ img {
 	
 	
 }
-
+.gallery__thumbnail-wrapper{
+	width: 85px;
+	height: 85px;
+	border-radius: 50%;
+	
+}
 .gallery__thumbnail {
 	position: relative;
-	width: 80px;
-	height: 80px;
+	width: 75px;
+	height: 75px;
 	border-radius: 50%;
 	overflow: hidden;
 	cursor: pointer;
@@ -86,9 +91,12 @@ img {
 	transition: transform 0.3s;
 }
 .gallery__thumbnail-img{
-	width: 80px;
+	width: 75px;
 	height: inherit;
 	object-fit: cover;
+}
+.active-slide-item{
+	border: 1px solid #FF7A00;
 }
 
 .gallery-overview{

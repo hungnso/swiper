@@ -1,10 +1,7 @@
 /*=============== SWIPER JS GALLERY ===============*/
-const swiperCards = new Swiper(".gallery-cards", {
+const swiperFilter = new Swiper(".swiper-list-filter", {
 	loop: true,
-	loopedSlides: 4.5,
-	slidesPerView: 3,
-	cssMode: true,
-	effect: "fade",
+	slidesPerView: 4.5,
 	
 });
 
@@ -258,7 +255,7 @@ const listFilterContainer =  document.querySelector('.list-filter')
 
 listFilter.forEach(item => {
 	const filterItem = document.createElement('div')
-	filterItem.classList.add('filter-item', 'col-3', 'text-center', 'mr-1')
+	filterItem.classList.add('filter-item', 'col-3',  'text-center', 'mr-1')
 	if(item.active){
 		filterItem.classList.add('active-filter')
 	}
@@ -287,7 +284,7 @@ listFilter.forEach(item => {
 const listSlider = [
 	{
 		content: "https://images.unsplash.com/photo-1669671943625-e20799ee5f42?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzI0MjY3ODQ&ixlib=rb-4.0.3&q=80&w=400",
-		active: false
+		active: true
 	},
 	{
 		content: "https://images.unsplash.com/photo-1670832215724-cce6d9ee619c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzI0MjY3ODQ&ixlib=rb-4.0.3&q=80&w=400",
@@ -328,25 +325,52 @@ const listSlider = [
 ]
 
 const listSliderContainer =  document.querySelector('.swiper-wrapper')
-listSlider.forEach(item =>
-	listSliderContainer.innerHTML +=
-	`
-	<div class="swiper-slide">
-	<div>
-		<div class="gallery__thumbnail ">
-		<img
-			src="${item.content}"
-			alt="image gallery"
-			alt="image thumbnail"
-			class="gallery__thumbnail-img"
-		/>
-		</div>
-	<div>
-  </div>
-	`
-	)
+let activeIndex = -1; // Index của phần tử đang được chọn (không có phần tử nào được chọn ban đầu)
 
+listSlider.forEach((item, index) => {
+  const slide = document.createElement('div');
+  slide.classList.add('swiper-slide');
 
+  const galleryThumbnailWrapper = document.createElement('div');
+  galleryThumbnailWrapper.classList.add(
+    'gallery__thumbnail-wrapper',
+    'd-flex',
+    'justify-content-center',
+    'align-items-center'
+  );
+  if (index === activeIndex) {
+    galleryThumbnailWrapper.classList.add('active-slide-item');
+  }
+
+  const galleryThumbnail = document.createElement('div');
+  galleryThumbnail.classList.add('gallery__thumbnail');
+
+  const thumbnailImg = document.createElement('img');
+  thumbnailImg.src = item.content;
+  thumbnailImg.alt = 'image gallery';
+  thumbnailImg.classList.add('gallery__thumbnail-img');
+
+  galleryThumbnail.appendChild(thumbnailImg);
+  galleryThumbnailWrapper.appendChild(galleryThumbnail);
+  slide.appendChild(galleryThumbnailWrapper);
+
+  // Gán sự kiện click cho mỗi slide
+  slide.addEventListener('click', () => {
+    // Xóa class active-slide-item của phần tử trước đó
+    const prevActiveSlide = listSliderContainer.querySelector('.active-slide-item');
+    if (prevActiveSlide) {
+      prevActiveSlide.classList.remove('active-slide-item');
+    }
+
+    // Thêm class active-slide-item cho phần tử hiện tại
+    galleryThumbnailWrapper.classList.add('active-slide-item');
+
+    // Cập nhật activeIndex thành index của phần tử hiện tại
+    activeIndex = index;
+  });
+
+  listSliderContainer.appendChild(slide);
+});
 
 /// Danh sách màu
 const listColor = [
