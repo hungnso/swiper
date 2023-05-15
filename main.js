@@ -37,7 +37,7 @@ window.addEventListener('resize', function() {
 /// Khi load lại trang
 document.addEventListener('DOMContentLoaded', function() {
 	// Hàm bạn muốn chạy khi trang web được tải vào trong
-	
+	myFunction()
 	// if (window.innerHeight === window.outerHeight) {
 	// 	console.log("Thanh công cụ đang ở phía trên của trang");
 	// 	const test = document.querySelector('.test')
