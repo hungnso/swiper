@@ -7,8 +7,8 @@
 let swiper1 = new Swiper('.swiper1', {
 	direction: 'vertical', // Cấu hình trượt theo hướng dọc
 	loop: true, // Lặp lại các slide
-	slidesPerView: 4.5
-  });
+	slidesPerView: 5.5
+ });
 let swiper2 = new Swiper('.swiper2', {
 	loop: true,
 	direction: 'horizontal',
@@ -197,117 +197,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		  
 		  break;
 	  }
-	// switch (true && !isTop) {
-	// 	case (screenHeight >= 500 && screenHeight < 550):
-	// 	  dynamicHeight = -120
-	// 	  bottomHeight = 125
-	// 	  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
-	// 	  document.documentElement.style.setProperty('--bottom-action', 
-	// 	  bottomHeight + 'px' 
-	// 	  )
-	// 	  break;
-	// 	case (screenHeight >= 550 && screenHeight < 600):
-	// 	  dynamicHeight = -110
-	// 	  bottomHeight = 115
-	// 	  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
-	// 	  document.documentElement.style.setProperty('--bottom-action', 
-	// 	  bottomHeight + 'px' 
-	// 	  )
-	// 	  break;
-	// 	case (screenHeight >= 600 && screenHeight < 650):
-	// 	  dynamicHeight = -100
-	// 	  bottomHeight = 105
-	// 	  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
-	// 	  document.documentElement.style.setProperty('--bottom-action', 
-	// 	  bottomHeight + 'px' 
-	// 	  )
-	// 	  break;
-	// 	case (screenHeight >= 650 && screenHeight < 700):
-	// 	  dynamicHeight = -90
-	// 	  bottomHeight = 95
-	// 	  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
-	// 	  document.documentElement.style.setProperty('--bottom-action', 
-	// 	  bottomHeight + 'px' 
-	// 	  )
-	// 	  break;
-	// 	case (screenHeight >= 700 && screenHeight < 750):
-	// 	  dynamicHeight = -80
-	// 	  bottomHeight = 85
-	// 	  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
-	// 	  document.documentElement.style.setProperty('--bottom-action', 
-	// 	  bottomHeight + 'px' 
-	// 	  )
-	// 	  console.log(700)
-	// 	  break;
-	// 	case (screenHeight >= 750 && screenHeight < 800):
-	// 	  dynamicHeight = -70
-	// 	  bottomHeight = 75
-	// 	  detailHeight = 36
-	// 	  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
-	// 	  document.documentElement.style.setProperty('--bottom-action', 
-	// 	  bottomHeight + 'px' 
-	// 	  )
-	// 	  document.documentElement.style.setProperty('--detail-height', 
-	// 	  detailHeight + '%' 
-	// 	  )
-	// 	  break;
-	// 	case (screenHeight >= 800 && screenHeight < 850):
-	// 	  dynamicHeight = -60
-	// 	  bottomHeight = 65
-	// 	  detailHeight = 39
-	// 	  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
-	// 	  document.documentElement.style.setProperty('--bottom-action', 
-	// 	  bottomHeight + 'px' 
-	// 	  )
-	// 	  document.documentElement.style.setProperty('--detail-height', 
-	// 	  detailHeight + '%' 
-	// 	  )
-	// 	  break;
-	// 	case (screenHeight >= 850 && screenHeight < 900):
-	// 	  dynamicHeight = -50
-	// 	  bottomHeight = 55
-	// 	  detailHeight = 42
-	// 	  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
-	// 	  document.documentElement.style.setProperty('--bottom-action', 
-	// 	  bottomHeight + 'px' 
-	// 	  )
-	// 	  document.documentElement.style.setProperty('--detail-height', 
-	// 	  detailHeight + '%' 
-	// 	  )
-		 
-	// 	  break;
-	// 	case (screenHeight >= 900 && screenHeight < 950):
-		  
-	// 	  dynamicHeight = -40
-	// 	  bottomHeight = 45
-	// 	  detailHeight = 45
-	// 	  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
-	// 	  document.documentElement.style.setProperty('--bottom-action', 
-	// 	  bottomHeight + 'px' 
-	// 	  )
-	// 	  document.documentElement.style.setProperty('--detail-height', 
-	// 	  detailHeight + '%' 
-	// 	  )
-		
-	// 	  break;
-	// 	case (screenHeight >= 950 && screenHeight < 1000):
-		  
-	// 	  dynamicHeight = -30
-	// 	  bottomHeight = 35
-	// 	  detailHeight = 48
-	// 	  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
-	// 	  document.documentElement.style.setProperty('--bottom-action', 
-	// 	  bottomHeight + 'px' 
-	// 	  )
-	// 	  document.documentElement.style.setProperty('--detail-height', 
-	// 	  detailHeight + '%' 
-	// 	  )
-	// 	  break;
-	// 	default:
-	// 	  console.log("Giá trị không khớp với bất kỳ trường hợp nào");
-		  
-	// 	  break;
-	//   }
+	
   }
 
 // Sự kiện load lại trang 
@@ -373,9 +263,20 @@ buttonShow.addEventListener('touchmove', function(event) {
 	initialX = null;
 	initialY = null;
   });
-btnToggle.addEventListener('click', function(){
+btnToggle.addEventListener('click', function(event){
 	sidebarContainer.classList.add('open')
+	  
 })
+document.addEventListener('click', function(event) {
+	console.log('zzz')
+	// Kiểm tra xem sự kiện click xảy ra trong hay ngoài thẻ sidebarContainer
+	if (!sidebarContainer.contains(event.target) && event.target !== btnToggle) {
+	  // Sự kiện click xảy ra ngoài thẻ sidebarContainer
+	  sidebarContainer.classList.remove('open');
+	  
+	  // Thực hiện các hành động khác khi click ra ngoài thẻ sidebarContainer
+	}
+  });
 
 const listFilter = [
 	{
