@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		const isTop = false
 		const test = document.querySelector('.test')
 		test.innerHTML = "Thanh công cụ đang ở phía dưới của trang"
-		myFunction();
+		myFunction(isTop);
 		console.log("Thanh công cụ đang ở phía dưới của trang");
 	  }
   });
