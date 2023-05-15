@@ -18,7 +18,7 @@
 	--smaller-font-size: 0.75rem;
 	--dynamic-height: 0;
 	--bottom-action: 0;
-	--detail-height: 30%
+	--detail-height: 29%
 
 	
 }
@@ -401,7 +401,7 @@ img {
 
   @keyframes slide-down {
 	0% {
-	  transform: translateY(-55%);
+	  transform: translateY(-50%);
 	}
 	
 	100% {
@@ -416,7 +416,7 @@ img {
 	}
 	
 	100% {
-	  transform: translateY(-55%);
+	  transform: translateY(-50%);
 	 
 	}
   }
