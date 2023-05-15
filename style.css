@@ -82,13 +82,13 @@ img {
 }
 .open{
 	opacity: 1;
-	z-index: 2;
- 	animation: appear 0.3s both;
+	z-index: 3;
+ 	animation: appear 0.3s linear;
 }
 .hidden{
-	opacity: 1;
-	z-index: 2;
- 	animation: appear2 0.3s both;
+	z-index: -1;
+	animation: appear2 0.3s linear;
+
 }
 
 .swiper-container {
@@ -481,21 +481,18 @@ img {
   }
   @keyframes appear {
 	0% {
-	  opacity: 0;
-	  translate: 0 10px;
+	  transform: translateX(-100%)
 	}
 	100% {
-	  opacity: 1;
-	  translate: 0;
+		transform: translateX(0%)
 	}
   }
   @keyframes appear2 {
 	0% {
-	  opacity: 1;
-	  translate: 0 10px;
+		transform: translateX(0%)
 	}
+	
 	100% {
-	  opacity: 0;
-	  translate: 0;
+		transform: translateX(-100%)
 	}
   }
