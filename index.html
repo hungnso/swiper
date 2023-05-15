@@ -6,10 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-    />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -23,8 +20,11 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
       integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
@@ -38,14 +38,105 @@
   </head>
   <body>
     <div class="gallery">
-      <!-- =============== SWIPER GALLERY CARDS =============== -->
+      <aside class="sidebar">
+        <div class="swiper-container swiper1">
+          <div class="swiper-wrapper">
+            <div class="nav-container">
+              <div class="swiper-slide nav-item">
+                <div class="nav-detail">
+                  <div class="detail-image">
+                    <img src="./assets/image/kinh_1.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide nav-item">
+                <div class="nav-detail">
+                  <div class="detail-image">
+                    <img src="./assets/image/kinh2.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide nav-item">
+                <div class="nav-detail">
+                  <div class="detail-image">
+                    <img src="./assets/image/kinh3.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide nav-item">
+                <div class="nav-detail">
+                  <div class="detail-image">
+                    <img src="./assets/image/kinh4.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide nav-item">
+                <div class="nav-detail">
+                  <div class="detail-image">
+                    <img src="./assets/image/kinh5.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide nav-item">
+                <div class="nav-detail">
+                  <div class="detail-image">
+                    <img src="./assets/image/kinh_1.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide nav-item">
+                <div class="nav-detail">
+                  <div class="detail-image">
+                    <img src="./assets/image/kinh_1.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide nav-item">
+                <div class="nav-detail">
+                  <div class="detail-image">
+                    <img src="./assets/image/kinh_1.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide nav-item">
+                <div class="nav-detail">
+                  <div class="detail-image">
+                    <img src="./assets/image/kinh_1.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide nav-item">
+                <div class="nav-detail">
+                  <div class="detail-image">
+                    <img src="./assets/image/kinh_1.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide nav-item">
+                <div class="nav-detail">
+                  <div class="detail-image">
+                    <img src="./assets/image/kinh_1.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide nav-item">
+                <div class="nav-detail">
+                  <div class="detail-image">
+                    <img src="./assets/image/kinh_1.png" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
       <div class="gallery-overview">
         <div class="overview-header d-flex align-items-center p-1">
           <div
             class="header-left text-right col-3 d-flex justify-content-between p-3"
           >
             <img
-              class="col-6 header-left-item"
+              class="col-6 header-left-item btn-toogle"
               src="./assets/image/menu 1.png"
               alt=""
             />
@@ -95,8 +186,8 @@
             </div>
             <div class="list-filter mt-1 d-flex"></div>
 
-            <div class="swiper swiper-list" style="height: 111px">
-              <div class="swiper-wrapper"></div>
+            <div class="swiper-container swiper2" style="height: 111px">
+              <div class="swiper-wrapper item-test"></div>
             </div>
             <div class="colors-wrapper d-flex">
               <div class="col-9">
@@ -140,6 +231,8 @@
         </div>
       </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
     <script src="./main.js"></script>
   </body>
 </html>

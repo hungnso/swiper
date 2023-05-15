@@ -1,14 +1,19 @@
 /*=============== SWIPER JS GALLERY ===============*/
-const swiperFilter = new Swiper(".swiper-list-filter", {
-	loop: true,
-	slidesPerView: 4.5,
+// const swiperFilter = new Swiper(".swiper-list-filter", {
+// 	loop: true,
+// 	slidesPerView: 4.5,
 	
-});
-
-let swiperThumbs = new Swiper(".swiper-list", {
+// });
+let swiper1 = new Swiper('.swiper1', {
+	direction: 'vertical', // Cấu hình trượt theo hướng dọc
+	loop: true, // Lặp lại các slide
+	slidesPerView: 4.5
+  });
+let swiper2 = new Swiper('.swiper2', {
 	loop: true,
+	direction: 'horizontal',
     slidesPerView: 4.5,
-	spaceBetween: 30
+	spaceBetween: 30,
 	// loopedSlides: 1,
 	 
 
@@ -18,6 +23,9 @@ const detail = document.querySelector('.gallery__overflow')
 const desc = document.querySelector('.info-wrapper')
 const btn = document.querySelector('.btn-wrapper')
 const iconShop = document.querySelector('.shop-icon')
+const btnToggle = document.querySelector('.btn-toogle')
+const sidebarContainer = document.querySelector('.sidebar')
+console.log(btnToggle)
 let screenWidth = window.innerWidth
 let screenHeight = window.innerHeight
 let toolbarWidth = window.outerWidth - window.innerWidth;
@@ -62,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	switch (true) {
 		case (screenHeight >= 500 && screenHeight < 550):
 		  dynamicHeight = -127
-		  detailHeight = 21
+		  detailHeight = 22
 		  bottomHeight = 1
 		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
 		  document.documentElement.style.setProperty('--bottom-action', 
@@ -75,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		case (screenHeight >= 550 && screenHeight < 600):
 		  dynamicHeight = -117
 		  bottomHeight = 120
-		  detailHeight = 21
+		  detailHeight = 22
 		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
 		  document.documentElement.style.setProperty('--bottom-action', 
 		  bottomHeight + 'px' 
@@ -87,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		case (screenHeight >= 600 && screenHeight < 650):
 		  dynamicHeight = -107
 		  bottomHeight = 110
-		  detailHeight = 24
+		  detailHeight = 25
 		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
 		  document.documentElement.style.setProperty('--bottom-action', 
 		  bottomHeight + 'px' 
@@ -99,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		case (screenHeight >= 650 && screenHeight < 700):
 		  dynamicHeight = -97
 		  bottomHeight = 100
-		  detailHeight = 27
+		  detailHeight = 28
 		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
 		  document.documentElement.style.setProperty('--bottom-action', 
 		  bottomHeight + 'px' 
@@ -111,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		case (screenHeight >= 700 && screenHeight < 750):
 		  dynamicHeight = -87
 		  bottomHeight = 90
-		  detailHeight = 30
+		  detailHeight = 31
 		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
 		  document.documentElement.style.setProperty('--bottom-action', 
 		  bottomHeight + 'px' 
@@ -123,7 +131,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		case (screenHeight >= 750 && screenHeight < 800):
 		  dynamicHeight = -77
 		  bottomHeight = 80
-		  detailHeight = 33
+		  detailHeight = 34
 		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
 		  document.documentElement.style.setProperty('--bottom-action', 
 		  bottomHeight + 'px' 
@@ -135,7 +143,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		case (screenHeight >= 800 && screenHeight < 850):
 		  dynamicHeight = -65
 		  bottomHeight = 70
-		  detailHeight = 36
+		  detailHeight = 37
 		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
 		  document.documentElement.style.setProperty('--bottom-action', 
 		  bottomHeight + 'px' 
@@ -147,7 +155,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		case (screenHeight >= 850 && screenHeight < 900):
 		  dynamicHeight = -55
 		  bottomHeight = 60
-		  detailHeight = 39
+		  detailHeight = 40
 		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
 		  document.documentElement.style.setProperty('--bottom-action', 
 		  bottomHeight + 'px' 
@@ -161,7 +169,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		  
 		  dynamicHeight = -40
 		  bottomHeight = 50
-		  detailHeight = 42
+		  detailHeight = 43
 		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
 		  document.documentElement.style.setProperty('--bottom-action', 
 		  bottomHeight + 'px' 
@@ -175,7 +183,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		  
 		  dynamicHeight = -30
 		  bottomHeight = 40
-		  detailHeight = 45
+		  detailHeight = 46
 		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
 		  document.documentElement.style.setProperty('--bottom-action', 
 		  bottomHeight + 'px' 
@@ -365,6 +373,9 @@ buttonShow.addEventListener('touchmove', function(event) {
 	initialX = null;
 	initialY = null;
   });
+btnToggle.addEventListener('click', function(){
+	sidebarContainer.classList.add('open')
+})
 
 const listFilter = [
 	{
@@ -457,7 +468,7 @@ const listSlider = [
 	},
 ]
 
-const listSliderContainer =  document.querySelector('.swiper-wrapper')
+const listSliderContainer =  document.querySelector('.item-test')
 let activeIndex = -1; // Index của phần tử đang được chọn (không có phần tử nào được chọn ban đầu)
 
 listSlider.forEach((item, index) => {
