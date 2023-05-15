@@ -24,18 +24,15 @@ const btn = document.querySelector('.btn-wrapper')
 const iconShop = document.querySelector('.shop-icon')
 const btnToggle = document.querySelector('.btn-toogle')
 const sidebarContainer = document.querySelector('.sidebar')
-console.log(btnToggle)
 let screenWidth = window.innerWidth
 let screenHeight = window.innerHeight
 let toolbarWidth = window.outerWidth - window.innerWidth;
-console.log(toolbarWidth)
 let dynamicHeight = 0
 let bottomHeight = 0
 let detailHeight = 33%
 
 
 /// set giá trị
-console.log(window.pageYOffset)
 /// Khi reszise
 window.addEventListener('resize', function() {
 	myFunction()
@@ -47,20 +44,8 @@ document.addEventListener('DOMContentLoaded', function() {
 	// Hàm bạn muốn chạy khi trang web được tải vào trong
 	myFunction()
 
-	 // Lấy vị trí cuối cùng của trang sau khi cuộn (tổng chiều cao của trang)
-	 var documentHeight = document.documentElement.scrollHeight;
-
-	 // Lấy vị trí hiện tại của thanh URL
-	 var scrollPosition = window.scrollY;
-   
-	 // Kiểm tra vị trí của thanh URL
-	 if (scrollPosition === 0) {
-	   console.log("Thanh URL đang ở phía trên của trang");
-	  
-	 } else if (scrollPosition + browserHeight === documentHeight) {
-	   console.log("Thanh URL đang ở phía dưới của trang");
 	
-	 }
+	 
 	
   });
 
@@ -267,15 +252,17 @@ btnToggle.addEventListener('click', function(event){
 	sidebarContainer.classList.add('open')
 	  
 })
-// document.addEventListener('click', function(event) {
-// 	// Kiểm tra xem sự kiện click xảy ra trong hay ngoài thẻ sidebarContainer
-// 	if (!sidebarContainer.contains(event.target) && event.target !== btnToggle) {
-// 	  // Sự kiện click xảy ra ngoài thẻ sidebarContainer
-// 	  sidebarContainer.classList.remove('open');
+document.addEventListener('click', function(event) {
+	// Kiểm tra xem sự kiện click xảy ra trong hay ngoài thẻ sidebarContainer
+	if (!sidebarContainer.contains(event.target) && event.target !== btnToggle) {
+	  // Sự kiện click xảy ra ngoài thẻ sidebarContainer
+	  sidebarContainer.classList.remove('open');
+	  sidebarContainer.classList.add('hidden');
+	 
 	  
-// 	  // Thực hiện các hành động khác khi click ra ngoài thẻ sidebarContainer
-// 	}
-//   });
+	  // Thực hiện các hành động khác khi click ra ngoài thẻ sidebarContainer
+	}
+  });
   sidebarContainer.addEventListener('touchstart', function(event) {
 	initialX = event.touches[0].clientX;
 	initialY = event.touches[0].clientY;

@@ -74,7 +74,6 @@ img {
     display: flex;
     flex-direction: column;
     padding-bottom: 10px;
-	opacity: 0;
 	/* z-index: 2; */
 	background-image: url(./assets/image/bg-navbar.png);
 	background-size: cover;
@@ -84,10 +83,14 @@ img {
 	opacity: 1;
 	z-index: 3;
  	animation: appear 0.3s linear;
+	transform: translateX(0%);
+
 }
 .hidden{
-	z-index: -1;
+	z-index: 2;
 	animation: appear2 0.3s linear;
+	transform: translateX(-100%);
+
 
 }
 
