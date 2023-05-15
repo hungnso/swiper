@@ -78,6 +78,8 @@ img {
 	background-image: url(./assets/image/bg-navbar.png);
 	background-size: cover;
 	backdrop-filter: blur(25px);
+	transform: translateX(-100%);
+
 }
 .open{
 	opacity: 1;
