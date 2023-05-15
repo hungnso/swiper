@@ -334,7 +334,7 @@ buttonShow.addEventListener('touchmove', function(event) {
 	  if (diffY > 0) {
 
 		// Vuốt lên
-		detail.style.transform = 'translateY(-50%)'
+		detail.style.transform = 'translateY(-55%)'
 		desc.style.opacity = '1'
 			btn.style.opacity = '1'
 		iconShop.style.opacity = '0'
