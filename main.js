@@ -26,6 +26,7 @@ let dynamicHeight = 0
 let bottomHeight = 0
 let detailHeight = 33%
 
+
 /// set giá trị
 
 /// Khi reszise
@@ -91,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		  )
 		  break;
 		case (screenHeight >= 700 && screenHeight < 750):
-		  dynamicHeight = -80
+		  dynamicHeight = -100
 		  bottomHeight = 85
 		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
 		  document.documentElement.style.setProperty('--bottom-action', 
