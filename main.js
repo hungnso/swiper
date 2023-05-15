@@ -28,7 +28,7 @@ let detailHeight = 33%
 
 
 /// set giá trị
-
+console.log(window.pageYOffset)
 /// Khi reszise
 window.addEventListener('resize', function() {
 	myFunction()
@@ -38,6 +38,14 @@ window.addEventListener('resize', function() {
 document.addEventListener('DOMContentLoaded', function() {
 	// Hàm bạn muốn chạy khi trang web được tải vào trong
 	myFunction();
+	if (window.innerHeight === window.outerHeight) {
+		console.log("Thanh công cụ đang ở phía trên của trang");
+	  }
+	  
+	  // Kiểm tra khi thanh công cụ đang ở phía dưới của trang
+	  if (window.innerHeight < window.outerHeight) {
+		console.log("Thanh công cụ đang ở phía dưới của trang");
+	  }
   });
   
   function myFunction() {
