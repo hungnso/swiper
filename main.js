@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	switch (true) {
 		case (screenHeight >= 500 && screenHeight < 550):
 		  dynamicHeight = -127
-		  detailHeight = 20
+		  detailHeight = 21
 		  bottomHeight = 1
 		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
 		  document.documentElement.style.setProperty('--bottom-action', 
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		case (screenHeight >= 550 && screenHeight < 600):
 		  dynamicHeight = -117
 		  bottomHeight = 120
-		  detailHeight = 20
+		  detailHeight = 21
 		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
 		  document.documentElement.style.setProperty('--bottom-action', 
 		  bottomHeight + 'px' 
@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		case (screenHeight >= 600 && screenHeight < 650):
 		  dynamicHeight = -107
 		  bottomHeight = 110
-		  detailHeight = 23
+		  detailHeight = 24
 		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
 		  document.documentElement.style.setProperty('--bottom-action', 
 		  bottomHeight + 'px' 
@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		case (screenHeight >= 650 && screenHeight < 700):
 		  dynamicHeight = -97
 		  bottomHeight = 100
-		  detailHeight = 26
+		  detailHeight = 27
 		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
 		  document.documentElement.style.setProperty('--bottom-action', 
 		  bottomHeight + 'px' 
@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		case (screenHeight >= 700 && screenHeight < 750):
 		  dynamicHeight = -87
 		  bottomHeight = 90
-		  detailHeight = 29
+		  detailHeight = 30
 		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
 		  document.documentElement.style.setProperty('--bottom-action', 
 		  bottomHeight + 'px' 
@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		case (screenHeight >= 750 && screenHeight < 800):
 		  dynamicHeight = -77
 		  bottomHeight = 80
-		  detailHeight = 32
+		  detailHeight = 33
 		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
 		  document.documentElement.style.setProperty('--bottom-action', 
 		  bottomHeight + 'px' 
@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		case (screenHeight >= 800 && screenHeight < 850):
 		  dynamicHeight = -65
 		  bottomHeight = 70
-		  detailHeight = 35
+		  detailHeight = 36
 		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
 		  document.documentElement.style.setProperty('--bottom-action', 
 		  bottomHeight + 'px' 
@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		case (screenHeight >= 850 && screenHeight < 900):
 		  dynamicHeight = -55
 		  bottomHeight = 60
-		  detailHeight = 38
+		  detailHeight = 39
 		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
 		  document.documentElement.style.setProperty('--bottom-action', 
 		  bottomHeight + 'px' 
@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		  
 		  dynamicHeight = -40
 		  bottomHeight = 50
-		  detailHeight = 41
+		  detailHeight = 42
 		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
 		  document.documentElement.style.setProperty('--bottom-action', 
 		  bottomHeight + 'px' 
@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		  
 		  dynamicHeight = -30
 		  bottomHeight = 40
-		  detailHeight = 44
+		  detailHeight = 45
 		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
 		  document.documentElement.style.setProperty('--bottom-action', 
 		  bottomHeight + 'px' 
