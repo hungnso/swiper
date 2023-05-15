@@ -154,6 +154,9 @@ img {
 .active-slide-item{
 	border: 1px solid #FF7A00;
 }
+.active-nav-item{
+	border: 1px solid #FF7A00;
+}
 
 .gallery-overview{
 	height: calc(100vh /100 * 65);
@@ -336,6 +339,7 @@ img {
 	color: #A3A3A3;
 	transition: transform 0.3s;
 	margin-right: 4px;
+	height: 30px !important;
 }
 .filter-item.active-filter {
 	/* transform: scale(1.2); */
@@ -343,6 +347,9 @@ img {
 .active-filter{
 	background: #FFEBDF;
 	border-radius: 24px;
+	font-family: 'Barlow', sans-serif;
+	font-weight: 600;
+	color: #303030
 
 }
 .title{

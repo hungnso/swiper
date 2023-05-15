@@ -1,18 +1,23 @@
-/*=============== SWIPER JS GALLERY ===============*/
-// const swiperFilter = new Swiper(".swiper-list-filter", {
-// 	loop: true,
-// 	slidesPerView: 4.5,
-	
-// });
+/// swiper của navbar
 let swiper1 = new Swiper('.swiper1', {
 	direction: 'vertical', // Cấu hình trượt theo hướng dọc
 	loop: true, // Lặp lại các slide
 	slidesPerView: 5.5
  });
+
+ /// swiper của item
 let swiper2 = new Swiper('.swiper2', {
 	loop: true,
     slidesPerView: 4.5,
 	spaceBetween: 30,
+	// loopedSlides: 1,
+	 
+
+});
+let swiper3 = new Swiper('.swiper3', {
+	loop: true,
+    slidesPerView: 4.5,
+
 	// loopedSlides: 1,
 	 
 
@@ -34,18 +39,11 @@ let detailHeight = 33%
 
 /// set giá trị
 /// Khi reszise
-window.addEventListener('resize', function() {
-	myFunction()
-  });
 
 /// Khi load lại trang
-var browserHeight = window.innerHeight;
 document.addEventListener('DOMContentLoaded', function() {
 	// Hàm bạn muốn chạy khi trang web được tải vào trong
-	myFunction()
-
-	
-	 
+	myFunction() 
 	
   });
 
@@ -252,17 +250,17 @@ btnToggle.addEventListener('click', function(event){
 	sidebarContainer.classList.add('open')
 	  
 })
-document.addEventListener('click', function(event) {
-	// Kiểm tra xem sự kiện click xảy ra trong hay ngoài thẻ sidebarContainer
-	if (!sidebarContainer.contains(event.target) && event.target !== btnToggle) {
-	  // Sự kiện click xảy ra ngoài thẻ sidebarContainer
-	  sidebarContainer.classList.remove('open');
-	  sidebarContainer.classList.add('hidden');
+// document.addEventListener('click', function(event) {
+// 	// Kiểm tra xem sự kiện click xảy ra trong hay ngoài thẻ sidebarContainer
+// 	if (!sidebarContainer.contains(event.target) && event.target !== btnToggle) {
+// 	  // Sự kiện click xảy ra ngoài thẻ sidebarContainer
+// 	  sidebarContainer.classList.remove('open');
+// 	  sidebarContainer.classList.add('hidden');
 	 
 	  
-	  // Thực hiện các hành động khác khi click ra ngoài thẻ sidebarContainer
-	}
-  });
+// 	  // Thực hiện các hành động khác khi click ra ngoài thẻ sidebarContainer
+// 	}
+//   });
   sidebarContainer.addEventListener('touchstart', function(event) {
 	initialX = event.touches[0].clientX;
 	initialY = event.touches[0].clientY;
@@ -288,17 +286,9 @@ document.addEventListener('click', function(event) {
 	  }
 	} else {
 		let setBottom = '55%'
-	  if (diffY > 0) {
-
-		// Vuốt lên
-		
-
-		
+	  if (diffY > 0) {	
 	
 	  } else {
-		// Vuốt xuống
-		
-
 		
 	  }
 	}
@@ -324,12 +314,36 @@ const listFilter = [
 	name: "Tags",
 	active: false
 	},
+	{
+	name: "Margin",
+	active: false
+	},
+	{
+	name: "Hover",
+	active: false
+	},
+	{
+	name: "Transition",
+	active: false
+	},
+	{
+	name: "Opacity",
+	active: false
+	},
+	{
+	name: "Loop",
+	active: false
+	},
+	{
+	name: "Scroll",
+	active: false
+	},
 ];
 const listFilterContainer =  document.querySelector('.list-filter')
 
 listFilter.forEach(item => {
 	const filterItem = document.createElement('div')
-	filterItem.classList.add('filter-item', 'col-3',  'text-center', 'mr-1')
+	filterItem.classList.add('filter-item', 'swiper-slide', 'text-center')
 	if(item.active){
 		filterItem.classList.add('active-filter')
 	}
@@ -445,6 +459,123 @@ listSlider.forEach((item, index) => {
 
   listSliderContainer.appendChild(slide);
 });
+// const listSliderContainer2 =  document.querySelector('.item-filter')
+// let activeIndex2 = -1; 
+
+// listSlider.forEach((item, index) => {
+//   const slide = document.createElement('div');
+//   slide.classList.add('swiper-slide');
+
+//   const galleryThumbnailWrapper = document.createElement('div');
+//   galleryThumbnailWrapper.classList.add(
+//     'gallery__thumbnail-wrapper',
+//     'd-flex',
+//     'justify-content-center',
+//     'align-items-center'
+//   );
+//   if (index === activeIndex2) {
+//     galleryThumbnailWrapper.classList.add('active-slide-item');
+//   }
+
+//   const galleryThumbnail = document.createElement('div');
+//   galleryThumbnail.classList.add('gallery__thumbnail');
+
+//   const thumbnailImg = document.createElement('img');
+//   thumbnailImg.src = item.content;
+//   thumbnailImg.alt = 'image gallery';
+//   thumbnailImg.classList.add('gallery__thumbnail-img');
+
+//   galleryThumbnail.appendChild(thumbnailImg);
+//   galleryThumbnailWrapper.appendChild(galleryThumbnail);
+//   slide.appendChild(galleryThumbnailWrapper);
+
+//   // Gán sự kiện click cho mỗi slide
+//   slide.addEventListener('click', () => {
+//     // Xóa class active-slide-item của phần tử trước đó
+//     const prevActiveSlide = listSliderContainer2.querySelector('.active-slide-item');
+//     if (prevActiveSlide) {
+//       prevActiveSlide.classList.remove('active-slide-item');
+//     }
+
+//     // Thêm class active-slide-item cho phần tử hiện tại
+//     galleryThumbnailWrapper.classList.add('active-slide-item');
+
+//     // Cập nhật activeIndex thành index của phần tử hiện tại
+//     activeIndex2 = index;
+//   });
+
+//   listSliderContainer2.appendChild(slide);
+// });
+
+/// Danh sách item nav
+const listNav = [
+  	{
+		url: "./assets/image/kinh_1.png",
+		active: false
+	},
+  	{
+		url: "./assets/image/kinh2.png",
+		active: false
+	},
+  	{
+		url: "./assets/image/kinh3.png",
+		active: false
+	},
+  	{
+		url: "./assets/image/kinh5.png",
+		active: false
+	},
+  	{
+		url: "./assets/image/kinh4.png",
+		active: false
+	},
+  	{
+		url: "./assets/image/kinh3.png",
+		active: false
+	},
+  	{
+		url: "./assets/image/kinh2.png",
+		active: false
+	},
+  	{
+		url: "./assets/image/kinh_1.png",
+		active: false
+	},
+]
+
+const listNavBarContainer = document.querySelector('.sidebar-item')
+let activeNavItem = -1
+listNav.forEach((item, index) =>{
+	const nav = document.createElement('div')
+	nav.classList.add('swiper-slide')
+	nav.classList.add('nav-item')
+	const navContent = document.createElement('div')
+	navContent.classList.add('nav-detail')
+	const contentImg = document.createElement('div')
+	contentImg.classList.add('detail-image')
+	const navImg = document.createElement('img')
+	navImg.src = item.url
+	navImg.alt = "Hình ảnh "
+	
+	contentImg.appendChild(navImg)
+	navContent.appendChild(contentImg)
+	nav.appendChild(navContent)
+
+	nav.addEventListener('click', () =>{
+		const prevActiveNav = listNavBarContainer.querySelector('.active-nav-item')
+		if(prevActiveNav){
+			prevActiveNav.classList.remove('active-nav-item');
+		}
+		navContent.classList.add('active-nav-item')
+		console.log('dang chon item so', index + 1)
+	})
+	
+
+	listNavBarContainer.appendChild(nav)
+})
+
+
+
 
 /// Danh sách màu
 const listColor = [
