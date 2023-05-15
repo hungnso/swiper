@@ -40,10 +40,14 @@ document.addEventListener('DOMContentLoaded', function() {
 	myFunction();
 	if (window.innerHeight === window.outerHeight) {
 		console.log("Thanh công cụ đang ở phía trên của trang");
+		const test = document.querySelector(".test")
+		test.innerHTML ="Thanh công cụ đang ở phía trên của trang"
 	  }
 	  
 	  // Kiểm tra khi thanh công cụ đang ở phía dưới của trang
 	  if (window.innerHeight < window.outerHeight) {
+		const test = document.querySelector(".test")
+		test.innerHTML ="Thanh công cụ đang ở phía dưới của trang"
 		console.log("Thanh công cụ đang ở phía dưới của trang");
 	  }
   });
