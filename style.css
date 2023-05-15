@@ -77,7 +77,8 @@ img {
 	/* z-index: 2; */
 	background-image: url(./assets/image/bg-navbar.png);
 	background-size: cover;
-	backdrop-filter: blur(25px);
+	/* backdrop-filter: blur(25px); */
+	background-color: rgba(0, 0, 0, 1);
 	transform: translateX(-100%);
 
 }
