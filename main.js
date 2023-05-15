@@ -38,28 +38,27 @@ window.addEventListener('resize', function() {
 document.addEventListener('DOMContentLoaded', function() {
 	// Hàm bạn muốn chạy khi trang web được tải vào trong
 	
-	if (window.innerHeight === window.outerHeight) {
-		console.log("Thanh công cụ đang ở phía trên của trang");
-		const test = document.querySelector('.test')
-		test.innerHTML = "Thanh công cụ đang ở phía trên của trang"
-		const isTop = true
-		myFunction(isTop);
-	  }
+	// if (window.innerHeight === window.outerHeight) {
+	// 	console.log("Thanh công cụ đang ở phía trên của trang");
+	// 	const test = document.querySelector('.test')
+	// 	test.innerHTML = "Thanh công cụ đang ở phía trên của trang"
+	// 	const isTop = true
+	// 	myFunction(isTop);
+	//   }
 	  
-	  // Kiểm tra khi thanh công cụ đang ở phía dưới của trang
-	  if (window.innerHeight < window.outerHeight) {
-		const isTop = false
-		const test = document.querySelector('.test')
-		test.innerHTML = "Thanh công cụ đang ở phía dưới của trang"
-		myFunction(isTop);
-		console.log("Thanh công cụ đang ở phía dưới của trang");
-	  }
+	//   // Kiểm tra khi thanh công cụ đang ở phía dưới của trang
+	//   if (window.innerHeight < window.outerHeight) {
+	// 	const isTop = false
+	// 	const test = document.querySelector('.test')
+	// 	test.innerHTML = "Thanh công cụ đang ở phía dưới của trang"
+	// 	myFunction(isTop);
+	// 	console.log("Thanh công cụ đang ở phía dưới của trang");
+	//   }
   });
 
   
-  function myFunction(isTop) {
-	console.log(isTop)
-	switch (true && isTop) {
+  function myFunction() {
+	switch (true) {
 		case (screenHeight >= 500 && screenHeight < 550):
 		  dynamicHeight = -120
 		  bottomHeight = 125
@@ -170,117 +169,117 @@ document.addEventListener('DOMContentLoaded', function() {
 		  
 		  break;
 	  }
-	switch (true && !isTop) {
-		case (screenHeight >= 500 && screenHeight < 550):
-		  dynamicHeight = -120
-		  bottomHeight = 125
-		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
-		  document.documentElement.style.setProperty('--bottom-action', 
-		  bottomHeight + 'px' 
-		  )
-		  break;
-		case (screenHeight >= 550 && screenHeight < 600):
-		  dynamicHeight = -110
-		  bottomHeight = 115
-		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
-		  document.documentElement.style.setProperty('--bottom-action', 
-		  bottomHeight + 'px' 
-		  )
-		  break;
-		case (screenHeight >= 600 && screenHeight < 650):
-		  dynamicHeight = -100
-		  bottomHeight = 105
-		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
-		  document.documentElement.style.setProperty('--bottom-action', 
-		  bottomHeight + 'px' 
-		  )
-		  break;
-		case (screenHeight >= 650 && screenHeight < 700):
-		  dynamicHeight = -90
-		  bottomHeight = 95
-		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
-		  document.documentElement.style.setProperty('--bottom-action', 
-		  bottomHeight + 'px' 
-		  )
-		  break;
-		case (screenHeight >= 700 && screenHeight < 750):
-		  dynamicHeight = -80
-		  bottomHeight = 85
-		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
-		  document.documentElement.style.setProperty('--bottom-action', 
-		  bottomHeight + 'px' 
-		  )
-		  console.log(700)
-		  break;
-		case (screenHeight >= 750 && screenHeight < 800):
-		  dynamicHeight = -70
-		  bottomHeight = 75
-		  detailHeight = 36
-		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
-		  document.documentElement.style.setProperty('--bottom-action', 
-		  bottomHeight + 'px' 
-		  )
-		  document.documentElement.style.setProperty('--detail-height', 
-		  detailHeight + '%' 
-		  )
-		  break;
-		case (screenHeight >= 800 && screenHeight < 850):
-		  dynamicHeight = -60
-		  bottomHeight = 65
-		  detailHeight = 39
-		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
-		  document.documentElement.style.setProperty('--bottom-action', 
-		  bottomHeight + 'px' 
-		  )
-		  document.documentElement.style.setProperty('--detail-height', 
-		  detailHeight + '%' 
-		  )
-		  break;
-		case (screenHeight >= 850 && screenHeight < 900):
-		  dynamicHeight = -50
-		  bottomHeight = 55
-		  detailHeight = 42
-		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
-		  document.documentElement.style.setProperty('--bottom-action', 
-		  bottomHeight + 'px' 
-		  )
-		  document.documentElement.style.setProperty('--detail-height', 
-		  detailHeight + '%' 
-		  )
+	// switch (true && !isTop) {
+	// 	case (screenHeight >= 500 && screenHeight < 550):
+	// 	  dynamicHeight = -120
+	// 	  bottomHeight = 125
+	// 	  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
+	// 	  document.documentElement.style.setProperty('--bottom-action', 
+	// 	  bottomHeight + 'px' 
+	// 	  )
+	// 	  break;
+	// 	case (screenHeight >= 550 && screenHeight < 600):
+	// 	  dynamicHeight = -110
+	// 	  bottomHeight = 115
+	// 	  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
+	// 	  document.documentElement.style.setProperty('--bottom-action', 
+	// 	  bottomHeight + 'px' 
+	// 	  )
+	// 	  break;
+	// 	case (screenHeight >= 600 && screenHeight < 650):
+	// 	  dynamicHeight = -100
+	// 	  bottomHeight = 105
+	// 	  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
+	// 	  document.documentElement.style.setProperty('--bottom-action', 
+	// 	  bottomHeight + 'px' 
+	// 	  )
+	// 	  break;
+	// 	case (screenHeight >= 650 && screenHeight < 700):
+	// 	  dynamicHeight = -90
+	// 	  bottomHeight = 95
+	// 	  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
+	// 	  document.documentElement.style.setProperty('--bottom-action', 
+	// 	  bottomHeight + 'px' 
+	// 	  )
+	// 	  break;
+	// 	case (screenHeight >= 700 && screenHeight < 750):
+	// 	  dynamicHeight = -80
+	// 	  bottomHeight = 85
+	// 	  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
+	// 	  document.documentElement.style.setProperty('--bottom-action', 
+	// 	  bottomHeight + 'px' 
+	// 	  )
+	// 	  console.log(700)
+	// 	  break;
+	// 	case (screenHeight >= 750 && screenHeight < 800):
+	// 	  dynamicHeight = -70
+	// 	  bottomHeight = 75
+	// 	  detailHeight = 36
+	// 	  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
+	// 	  document.documentElement.style.setProperty('--bottom-action', 
+	// 	  bottomHeight + 'px' 
+	// 	  )
+	// 	  document.documentElement.style.setProperty('--detail-height', 
+	// 	  detailHeight + '%' 
+	// 	  )
+	// 	  break;
+	// 	case (screenHeight >= 800 && screenHeight < 850):
+	// 	  dynamicHeight = -60
+	// 	  bottomHeight = 65
+	// 	  detailHeight = 39
+	// 	  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
+	// 	  document.documentElement.style.setProperty('--bottom-action', 
+	// 	  bottomHeight + 'px' 
+	// 	  )
+	// 	  document.documentElement.style.setProperty('--detail-height', 
+	// 	  detailHeight + '%' 
+	// 	  )
+	// 	  break;
+	// 	case (screenHeight >= 850 && screenHeight < 900):
+	// 	  dynamicHeight = -50
+	// 	  bottomHeight = 55
+	// 	  detailHeight = 42
+	// 	  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
+	// 	  document.documentElement.style.setProperty('--bottom-action', 
+	// 	  bottomHeight + 'px' 
+	// 	  )
+	// 	  document.documentElement.style.setProperty('--detail-height', 
+	// 	  detailHeight + '%' 
+	// 	  )
 		 
-		  break;
-		case (screenHeight >= 900 && screenHeight < 950):
+	// 	  break;
+	// 	case (screenHeight >= 900 && screenHeight < 950):
 		  
-		  dynamicHeight = -40
-		  bottomHeight = 45
-		  detailHeight = 45
-		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
-		  document.documentElement.style.setProperty('--bottom-action', 
-		  bottomHeight + 'px' 
-		  )
-		  document.documentElement.style.setProperty('--detail-height', 
-		  detailHeight + '%' 
-		  )
+	// 	  dynamicHeight = -40
+	// 	  bottomHeight = 45
+	// 	  detailHeight = 45
+	// 	  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
+	// 	  document.documentElement.style.setProperty('--bottom-action', 
+	// 	  bottomHeight + 'px' 
+	// 	  )
+	// 	  document.documentElement.style.setProperty('--detail-height', 
+	// 	  detailHeight + '%' 
+	// 	  )
 		
-		  break;
-		case (screenHeight >= 950 && screenHeight < 1000):
+	// 	  break;
+	// 	case (screenHeight >= 950 && screenHeight < 1000):
 		  
-		  dynamicHeight = -30
-		  bottomHeight = 35
-		  detailHeight = 48
-		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
-		  document.documentElement.style.setProperty('--bottom-action', 
-		  bottomHeight + 'px' 
-		  )
-		  document.documentElement.style.setProperty('--detail-height', 
-		  detailHeight + '%' 
-		  )
-		  break;
-		default:
-		  console.log("Giá trị không khớp với bất kỳ trường hợp nào");
+	// 	  dynamicHeight = -30
+	// 	  bottomHeight = 35
+	// 	  detailHeight = 48
+	// 	  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
+	// 	  document.documentElement.style.setProperty('--bottom-action', 
+	// 	  bottomHeight + 'px' 
+	// 	  )
+	// 	  document.documentElement.style.setProperty('--detail-height', 
+	// 	  detailHeight + '%' 
+	// 	  )
+	// 	  break;
+	// 	default:
+	// 	  console.log("Giá trị không khớp với bất kỳ trường hợp nào");
 		  
-		  break;
-	  }
+	// 	  break;
+	//   }
   }
 
 // Sự kiện load lại trang 
