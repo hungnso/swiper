@@ -35,22 +35,27 @@ window.addEventListener('resize', function() {
   });
 
 /// Khi load lại trang
+var browserHeight = window.innerHeight;
 document.addEventListener('DOMContentLoaded', function() {
 	// Hàm bạn muốn chạy khi trang web được tải vào trong
 	myFunction()
 
-	if (window.pageYOffset === 0) {
-		console.log("Thanh URL đang ở phía trên của trang");
-		const test = document.querySelector('.test')
-		test.textContent = "Thanh URL đang ở phía trên của trang"
-	  }
-	  
-	  // Kiểm tra khi thanh URL đang ở phía dưới của trang
-	  if (window.pageYOffset > 0) {
-		console.log("Thanh URL đang ở phía dưới của trang");
-		const test = document.querySelector('.test')
-		test.textContent = "Thanh URL đang ở phía dưới của trang"
-	  }
+	 // Lấy vị trí cuối cùng của trang sau khi cuộn (tổng chiều cao của trang)
+	 var documentHeight = document.documentElement.scrollHeight;
+
+	 // Lấy vị trí hiện tại của thanh URL
+	 var scrollPosition = window.scrollY;
+   
+	 // Kiểm tra vị trí của thanh URL
+	 if (scrollPosition === 0) {
+	   console.log("Thanh URL đang ở phía trên của trang");
+	   const test = document.querySelector('.test')
+	   test.textContent = "Thanh URL đang ở phía trên của trang"
+	 } else if (scrollPosition + browserHeight === documentHeight) {
+	   console.log("Thanh URL đang ở phía dưới của trang");
+	   const test = document.querySelector('.test')
+	   test.textContent = "Thanh URL đang ở phía trên của trang"
+	 }
 	// if (window.innerHeight === window.outerHeight) {
 	// 	console.log("Thanh công cụ đang ở phía trên của trang");
 	// 	const test = document.querySelector('.test')
