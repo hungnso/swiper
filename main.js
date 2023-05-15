@@ -267,7 +267,6 @@ btnToggle.addEventListener('click', function(event){
 	  
 })
 document.addEventListener('click', function(event) {
-	console.log('zzz')
 	// Kiểm tra xem sự kiện click xảy ra trong hay ngoài thẻ sidebarContainer
 	if (!sidebarContainer.contains(event.target) && event.target !== btnToggle) {
 	  // Sự kiện click xảy ra ngoài thẻ sidebarContainer
@@ -275,6 +274,49 @@ document.addEventListener('click', function(event) {
 	  
 	  // Thực hiện các hành động khác khi click ra ngoài thẻ sidebarContainer
 	}
+  });
+  sidebarContainer.addEventListener('touchstart', function(event) {
+	initialX = event.touches[0].clientX;
+	initialY = event.touches[0].clientY;
+  });
+  sidebarContainer.addEventListener('touchmove', function(event) {
+	if (!initialX || !initialY) {
+	  return;
+	}
+  
+	var currentX = event.touches[0].clientX;
+	var currentY = event.touches[0].clientY;
+	var diffX = initialX - currentX;
+	var diffY = initialY - currentY;
+  
+	// Xác định hướng vuốt (ngang hay dọc)
+	if (Math.abs(diffX) > Math.abs(diffY)) {
+	  if (diffX > 0) {
+		// Vuốt sang trái
+		console.log('sang trai')
+		sidebarContainer.classList.remove('open');
+	  } else {
+		// Vuốt sang phải
+	  }
+	} else {
+		let setBottom = '55%'
+	  if (diffY > 0) {
+
+		// Vuốt lên
+		
+
+		
+	
+	  } else {
+		// Vuốt xuống
+		
+
+		
+	  }
+	}
+  
+	initialX = null;
+	initialY = null;
   });
 
 const listFilter = [
