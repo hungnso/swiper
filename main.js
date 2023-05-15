@@ -49,29 +49,12 @@ document.addEventListener('DOMContentLoaded', function() {
 	 // Kiểm tra vị trí của thanh URL
 	 if (scrollPosition === 0) {
 	   console.log("Thanh URL đang ở phía trên của trang");
-	   const test = document.querySelector('.test')
-	   test.textContent = "Thanh URL đang ở phía trên của trang"
+	  
 	 } else if (scrollPosition + browserHeight === documentHeight) {
 	   console.log("Thanh URL đang ở phía dưới của trang");
-	   const test = document.querySelector('.test')
-	   test.textContent = "Thanh URL đang ở phía trên của trang"
+	
 	 }
-	// if (window.innerHeight === window.outerHeight) {
-	// 	console.log("Thanh công cụ đang ở phía trên của trang");
-	// 	const test = document.querySelector('.test')
-	// 	test.innerHTML = "Thanh công cụ đang ở phía trên của trang"
-	// 	const isTop = true
-	// 	myFunction(isTop);
-	//   }
-	  
-	//   // Kiểm tra khi thanh công cụ đang ở phía dưới của trang
-	//   if (window.innerHeight < window.outerHeight) {
-	// 	const isTop = false
-	// 	const test = document.querySelector('.test')
-	// 	test.innerHTML = "Thanh công cụ đang ở phía dưới của trang"
-	// 	myFunction(isTop);
-	// 	console.log("Thanh công cụ đang ở phía dưới của trang");
-	//   }
+	
   });
 
   
