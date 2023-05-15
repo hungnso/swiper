@@ -1,13 +1,13 @@
 /// swiper của navbar
 let swiper1 = new Swiper('.swiper1', {
 	direction: 'vertical', // Cấu hình trượt theo hướng dọc
-	loop: true, // Lặp lại các slide
+	loop: false, // Lặp lại các slide
 	slidesPerView: 5.5
  });
 
  /// swiper của item
 let swiper2 = new Swiper('.swiper2', {
-	loop: false,
+	loop: true,
     slidesPerView: 4.5,
 	spaceBetween: 30,
 	// loopedSlides: 1,
@@ -519,6 +519,10 @@ const listNav = [
 	},
   	{
 		url: "./assets/image/kinh3.png",
+		active: false
+	},
+  	{
+		url: "./assets/image/kinh4.png",
 		active: false
 	},
   	{
