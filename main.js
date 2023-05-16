@@ -23,9 +23,9 @@ let swiper3 = new Swiper('.swiper3', {
 
 });
 const buttonShow = document.querySelector('.test-touch')
-let userAgent = navigator.userAgent;
+let userAgent = navigator.userAgent
+const nameTest = document.querySelector('.name-test')
 const detail = document.querySelector('.gallery__overflow')
-const nametest = document.querySelector('.name-test')
 const desc = document.querySelector('.info-wrapper')
 const btn = document.querySelector('.btn-wrapper')
 const iconShop = document.querySelector('.shop-icon')
@@ -43,11 +43,27 @@ let detailHeight = 33%
 /// Khi reszise
 
 /// Khi load lại trang
-console.log(userAgent);
 document.addEventListener('DOMContentLoaded', function() {
 	// Hàm bạn muốn chạy khi trang web được tải vào trong
 	myFunction() 
-	
+	var userAgent = navigator.userAgent;
+var browserName = "";
+
+if (/Opera|OPR/.test(userAgent)) {
+    browserName = "Opera";
+} else if (/Edg/.test(userAgent)) {
+    browserName = "Microsoft Edge";
+} else if (/Chrome/.test(userAgent)) {
+    browserName = "Chrome";
+} else if (/Safari/.test(userAgent)) {
+    browserName = "Safari";
+} else if (/Firefox/.test(userAgent)) {
+    browserName = "Firefox";
+} else if (/Trident/.test(userAgent)) {
+    browserName = "Internet Explorer";
+}
+nameTest.textContent = `${browserName}`
+console.log("Trình duyệt đang được sử dụng: " + browserName);
 	
   });
 
@@ -91,11 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		  )
 		  break;
 		case (screenHeight >= 650 && screenHeight < 700):
-			console.log(userAgent.indexOf("Safari"))
-			console.log(userAgent)
-			if(userAgent.indexOf("Chrome") > -1){
-				
-				nametest.textContent = `${userAgent}`
+			if(userAgent.indexOf("Safari") > -1){
 				dynamicHeight = -87
 				bottomHeight = 65
 				detailHeight = 32
