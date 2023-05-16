@@ -47,6 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	// Hàm bạn muốn chạy khi trang web được tải vào trong
 	myFunction() 
 	var userAgent = navigator.userAgent;
+	console.log(userAgent)
 var browserName = "";
 
 if (/Opera|OPR/.test(userAgent)) {
@@ -63,7 +64,6 @@ if (/Opera|OPR/.test(userAgent)) {
     browserName = "Internet Explorer";
 }
 nameTest.textContent = `${browserName}`
-console.log("Trình duyệt đang được sử dụng: " + browserName);
 	
   });
 
@@ -108,7 +108,7 @@ console.log("Trình duyệt đang được sử dụng: " + browserName);
 		  break;
 		case (screenHeight >= 650 && screenHeight < 700):
 			
-				dynamicHeight = -97
+				dynamicHeight = -57
 				bottomHeight = 65
 				detailHeight = 32
 				document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
@@ -123,7 +123,7 @@ console.log("Trình duyệt đang được sử dụng: " + browserName);
 		
 		  break;
 		case (screenHeight >= 700 && screenHeight < 750):
-		  dynamicHeight = -77
+		  dynamicHeight = -47
 		  bottomHeight = 55
 		  detailHeight = 35
 		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
