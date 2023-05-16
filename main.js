@@ -62,7 +62,7 @@ if (/Opera|OPR/.test(userAgent)) {
 } else if (/Trident/.test(userAgent)) {
     browserName = "Internet Explorer";
 }
-nameTest.textContent = `${userAgent}`
+nameTest.textContent = `${browserName}`
 	
   });
 
