@@ -161,7 +161,7 @@ img {
 }
 
 .gallery-overview{
-	height: calc(100vh /100 * 65);
+	height: calc(100vh /100 * 80);
 	/* height: 100vh; */
 	position: relative;
 	background-color: rgb(212, 194, 194);
