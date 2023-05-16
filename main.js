@@ -107,8 +107,8 @@ console.log("Trình duyệt đang được sử dụng: " + browserName);
 		  )
 		  break;
 		case (screenHeight >= 650 && screenHeight < 700):
-			if(userAgent.indexOf("Safari") > -1){
-				dynamicHeight = -97
+			
+				dynamicHeight = -87
 				bottomHeight = 65
 				detailHeight = 32
 				document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
@@ -118,18 +118,8 @@ console.log("Trình duyệt đang được sử dụng: " + browserName);
 				document.documentElement.style.setProperty('--detail-height', 
 				detailHeight + '%' 
 				)
-			} else {
-				dynamicHeight = -47
-				bottomHeight = 65
-				detailHeight = 32
-				document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
-				document.documentElement.style.setProperty('--bottom-action', 
-				bottomHeight + 'px' 
-				)
-				document.documentElement.style.setProperty('--detail-height', 
-				detailHeight + '%' 
-				)
-			}
+			
+			
 		
 		  break;
 		case (screenHeight >= 700 && screenHeight < 750):
