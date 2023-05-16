@@ -490,55 +490,7 @@ listSlider.forEach((item, index) => {
 
   listSliderContainer.appendChild(slide);
 });
-// const listSliderContainer2 =  document.querySelector('.item-filter')
-// let activeIndex2 = -1; 
 
-// listSlider.forEach((item, index) => {
-//   const slide = document.createElement('div');
-//   slide.classList.add('swiper-slide');
-
-//   const galleryThumbnailWrapper = document.createElement('div');
-//   galleryThumbnailWrapper.classList.add(
-//     'gallery__thumbnail-wrapper',
-//     'd-flex',
-//     'justify-content-center',
-//     'align-items-center'
-//   );
-//   if (index === activeIndex2) {
-//     galleryThumbnailWrapper.classList.add('active-slide-item');
-//   }
-
-//   const galleryThumbnail = document.createElement('div');
-//   galleryThumbnail.classList.add('gallery__thumbnail');
-
-//   const thumbnailImg = document.createElement('img');
-//   thumbnailImg.src = item.content;
-//   thumbnailImg.alt = 'image gallery';
-//   thumbnailImg.classList.add('gallery__thumbnail-img');
-
-//   galleryThumbnail.appendChild(thumbnailImg);
-//   galleryThumbnailWrapper.appendChild(galleryThumbnail);
-//   slide.appendChild(galleryThumbnailWrapper);
-
-//   // Gán sự kiện click cho mỗi slide
-//   slide.addEventListener('click', () => {
-//     // Xóa class active-slide-item của phần tử trước đó
-//     const prevActiveSlide = listSliderContainer2.querySelector('.active-slide-item');
-//     if (prevActiveSlide) {
-//       prevActiveSlide.classList.remove('active-slide-item');
-//     }
-
-//     // Thêm class active-slide-item cho phần tử hiện tại
-//     galleryThumbnailWrapper.classList.add('active-slide-item');
-
-//     // Cập nhật activeIndex thành index của phần tử hiện tại
-//     activeIndex2 = index;
-//   });
-
-//   listSliderContainer2.appendChild(slide);
-// });
-
-/// Danh sách item nav
 const listNav = [
   	{
 		url: "./assets/image/kinh_1.png",
@@ -630,6 +582,33 @@ const listColor = [
 		color: "bg-secondary",
 		active: false
 	},
+	
+]
+const listColor2 = [
+	{
+		color: "bg-dark",
+		active: true
+	},
+	{
+		color: "bg-success",
+		active: false
+	},
+	{
+		color: "bg-danger",
+		active: false
+	},
+	{
+		color: "bg-secondary",
+		active: false
+	},
+	{
+		color: "bg-warning",
+		active: false
+	},
+	{
+		color: "bg-info",
+		active: false
+	},
 ]
 const listColorContainer = document.querySelector('.list-color')
 listColor.forEach(item => {
@@ -655,5 +634,27 @@ listColor.forEach(item => {
 	
 		// Xử lý sự kiện click tại đây
 	  });
+})
+const listIconRightContainer = document.querySelector('.icon-right')
+let activeColor = -1
+listColor2.forEach((item, index) => {
+	const iconRightItem = document.createElement('div')
+	iconRightItem.classList.add('swiper-slide', 'icon-right-item')
+
+	const iconColor = document.createElement('div')
+	iconColor.classList.add(`${item.color}`, 'color-item', 'mt-3')
+
+	iconRightItem.appendChild(iconColor)
+	listIconRightContainer.appendChild(iconRightItem)
+
+	iconRightItem.addEventListener('click', () =>{
+		const prevActiveSlide = listIconRightContainer.querySelector('.active-color');
+			if (prevActiveSlide) {
+			prevActiveSlide.classList.remove('active-color');
+			}
+			iconColor.classList.add('active-color')
+			activeColor  = index
+	})
+
 })
 // const test = document.querySelector('.gallery__overflow')
