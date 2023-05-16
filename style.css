@@ -134,6 +134,9 @@ img {
 	border-radius: 50%;
 	
 }
+.swiper2{
+	height: 111px;
+}
 .gallery__thumbnail {
 	position: relative;
 	width: 75px;
@@ -405,6 +408,18 @@ img {
 	}
 	.test-touch{
 		
+	}
+}
+
+@media (min-height: 650px) and (max-height: 700px) {
+	.gallery__thumbnail{
+		width: 65px;
+		height: 65px;
+	}
+	.gallery__thumbnail-img {
+		width: 65px;
+		height: inherit;
+		object-fit: cover;
 	}
 }
 /* @media screen and (max-width: 380px) {
