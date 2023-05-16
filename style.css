@@ -508,10 +508,4 @@ img {
 	}
   }
 
-  @media screen and (min-color-index: 0) and (-webkit-min-device-pixel-ratio: 0) {
-	/* Điều kiện User Agent cho Safari trên điện thoại */
-	/* Áp dụng CSS tương ứng */
-	.filter-item{
-		color: red;
-	}
-  }
+
