@@ -107,10 +107,10 @@ nameTest.textContent = `${browserName}`
 		  break;
 		case (screenHeight >= 650 && screenHeight < 700):
 	
-				dynamicHeight = -20
+				dynamicHeight = -30
 				bottomHeight = 65
-				detailHeight = 41
-				document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
+				detailHeight = 42
+				document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + '%');
 				document.documentElement.style.setProperty('--bottom-action', 
 				bottomHeight + 'px' 
 				)
@@ -122,10 +122,10 @@ nameTest.textContent = `${browserName}`
 		
 		  break;
 		case (screenHeight >= 700 && screenHeight < 750):
-		  dynamicHeight = -10
+		  dynamicHeight = -30
 		  bottomHeight = 55
-		  detailHeight = 41
-		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
+		  detailHeight = 42
+		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + '%');
 		  document.documentElement.style.setProperty('--bottom-action', 
 		  bottomHeight + 'px' 
 		  )
@@ -134,10 +134,10 @@ nameTest.textContent = `${browserName}`
 		  )
 		  break;
 		case (screenHeight >= 750 && screenHeight < 800):
-		  dynamicHeight = -37
+		  dynamicHeight = -30
 		  bottomHeight = 45
 		  detailHeight = 38
-		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
+		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + '%');
 		  document.documentElement.style.setProperty('--bottom-action', 
 		  bottomHeight + 'px' 
 		  )
@@ -146,10 +146,11 @@ nameTest.textContent = `${browserName}`
 		  )
 		  break;
 		case (screenHeight >= 800 && screenHeight < 850):
-		  dynamicHeight = -27
+		  dynamicHeight = -30
 		  bottomHeight = 35
 		  detailHeight = 41
-		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
+		  console.log(dynamicHeight)
+		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + '%');
 		  document.documentElement.style.setProperty('--bottom-action', 
 		  bottomHeight + 'px' 
 		  )
@@ -158,10 +159,10 @@ nameTest.textContent = `${browserName}`
 		  )
 		  break;
 		case (screenHeight >= 850 && screenHeight < 900):
-		  dynamicHeight = -27
+		  dynamicHeight = -30
 		  bottomHeight = 25
 		  detailHeight = 44
-		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
+		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + '%');
 		  document.documentElement.style.setProperty('--bottom-action', 
 		  bottomHeight + 'px' 
 		  )
@@ -172,10 +173,10 @@ nameTest.textContent = `${browserName}`
 		  break;
 		case (screenHeight >= 900 && screenHeight < 950):
 		  
-		  dynamicHeight = -27
+		  dynamicHeight = -30
 		  bottomHeight = 15
 		  detailHeight = 47
-		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
+		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + '%');
 		  document.documentElement.style.setProperty('--bottom-action', 
 		  bottomHeight + 'px' 
 		  )
@@ -189,7 +190,7 @@ nameTest.textContent = `${browserName}`
 		  dynamicHeight = -30
 		  bottomHeight = 5
 		  detailHeight = 51
-		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
+		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + '%');
 		  document.documentElement.style.setProperty('--bottom-action', 
 		  bottomHeight + 'px' 
 		  )
@@ -237,7 +238,7 @@ buttonShow.addEventListener('touchmove', function(event) {
 	  if (diffY > 0) {
 
 		// Vuốt lên
-		detail.style.transform = 'translateY(-80%)'
+		detail.style.transform = 'translateY(-100%)'
 		desc.style.opacity = '1'
 			btn.style.opacity = '1'
 		iconShop.style.opacity = '0'
@@ -248,7 +249,7 @@ buttonShow.addEventListener('touchmove', function(event) {
 		
 	
 	  } else {
-		detail.style.transform = `translateY(${dynamicHeight}px)`
+		detail.style.transform = `translateY(${dynamicHeight}%)`
 		// detail.style.transition = 'transform 0.5s ease-in-out'
 		detail.style.transition = ''
 		detail.style.animation = "slide-down 0.5s ease-in-out "
