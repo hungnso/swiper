@@ -91,8 +91,11 @@ document.addEventListener('DOMContentLoaded', function() {
 		  )
 		  break;
 		case (screenHeight >= 650 && screenHeight < 700):
-			nametest.textContent = `${userAgent}`
-			if(userAgent.indexOf("Safari") > -1){
+			console.log(userAgent.indexOf("Safari"))
+			console.log(userAgent)
+			if(userAgent.indexOf("Chrome") > -1){
+				
+				nametest.textContent = `${userAgent}`
 				dynamicHeight = -87
 				bottomHeight = 65
 				detailHeight = 32
