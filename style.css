@@ -166,7 +166,7 @@ img {
 	background-size: cover; */
 }
 .overview-header{
-	height: 15%;
+	height: 50px;
 	width: 100%;
 	background: rgba(29, 29, 29, 0.1);
 	/* box-shadow: 0px 0.5px 0px rgba(0, 0, 0, 0.3); */
