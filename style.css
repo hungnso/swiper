@@ -390,6 +390,9 @@ img {
 		height: inherit;
 		object-fit: cover;
 	}
+	.swiper2{
+		height: 86px !important;
+	}
 }
 /* @media screen and (max-width: 380px) {
 	.gallery__overflow{
