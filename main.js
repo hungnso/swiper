@@ -108,7 +108,7 @@ console.log("Trình duyệt đang được sử dụng: " + browserName);
 		  break;
 		case (screenHeight >= 650 && screenHeight < 700):
 			
-				dynamicHeight = -87
+				dynamicHeight = -97
 				bottomHeight = 65
 				detailHeight = 32
 				document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
