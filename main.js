@@ -28,6 +28,7 @@ const nameTest = document.querySelector('.name-test')
 const detail = document.querySelector('.gallery__overflow')
 const desc = document.querySelector('.info-wrapper')
 const btn = document.querySelector('.btn-wrapper')
+const colorWrapper = document.querySelector('.colors-wrapper')
 const iconShop = document.querySelector('.shop-icon')
 const btnToggle = document.querySelector('.btn-toogle')
 const sidebarContainer = document.querySelector('.sidebar')
@@ -109,7 +110,7 @@ nameTest.textContent = `${browserName}`
 	
 				dynamicHeight = -30
 				bottomHeight = 65
-				detailHeight = 41
+				detailHeight = 40
 				document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + '%');
 				document.documentElement.style.setProperty('--bottom-action', 
 				bottomHeight + 'px' 
@@ -124,7 +125,7 @@ nameTest.textContent = `${browserName}`
 		case (screenHeight >= 700 && screenHeight < 750):
 		  dynamicHeight = -30
 		  bottomHeight = 55
-		  detailHeight = 41
+		  detailHeight = 40
 		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + '%');
 		  document.documentElement.style.setProperty('--bottom-action', 
 		  bottomHeight + 'px' 
@@ -136,7 +137,7 @@ nameTest.textContent = `${browserName}`
 		case (screenHeight >= 750 && screenHeight < 800):
 		  dynamicHeight = -30
 		  bottomHeight = 45
-		  detailHeight = 38
+		  detailHeight = 40
 		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + '%');
 		  document.documentElement.style.setProperty('--bottom-action', 
 		  bottomHeight + 'px' 
@@ -148,7 +149,7 @@ nameTest.textContent = `${browserName}`
 		case (screenHeight >= 800 && screenHeight < 850):
 		  dynamicHeight = -30
 		  bottomHeight = 35
-		  detailHeight = 41
+		  detailHeight = 40
 		  console.log(dynamicHeight)
 		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + '%');
 		  document.documentElement.style.setProperty('--bottom-action', 
@@ -161,7 +162,7 @@ nameTest.textContent = `${browserName}`
 		case (screenHeight >= 850 && screenHeight < 900):
 		  dynamicHeight = -30
 		  bottomHeight = 25
-		  detailHeight = 44
+		  detailHeight = 40
 		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + '%');
 		  document.documentElement.style.setProperty('--bottom-action', 
 		  bottomHeight + 'px' 
@@ -175,7 +176,7 @@ nameTest.textContent = `${browserName}`
 		  
 		  dynamicHeight = -30
 		  bottomHeight = 15
-		  detailHeight = 47
+		  detailHeight = 40
 		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + '%');
 		  document.documentElement.style.setProperty('--bottom-action', 
 		  bottomHeight + 'px' 
@@ -189,7 +190,7 @@ nameTest.textContent = `${browserName}`
 		  
 		  dynamicHeight = -30
 		  bottomHeight = 5
-		  detailHeight = 51
+		  detailHeight = 40
 		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + '%');
 		  document.documentElement.style.setProperty('--bottom-action', 
 		  bottomHeight + 'px' 
@@ -241,6 +242,7 @@ buttonShow.addEventListener('touchmove', function(event) {
 		detail.style.transform = 'translateY(-100%)'
 		desc.style.opacity = '1'
 			btn.style.opacity = '1'
+			colorWrapper.style.opacity ='1'
 		iconShop.style.opacity = '0'
 		detail.style.animation = ""
 		// detail.style.transition = 'transform 0.3s ease-in-out'
