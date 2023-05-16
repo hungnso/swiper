@@ -44,6 +44,8 @@ let detailHeight = 33%
 document.addEventListener('DOMContentLoaded', function() {
 	// Hàm bạn muốn chạy khi trang web được tải vào trong
 	myFunction() 
+	var userAgent = navigator.userAgent;
+console.log(userAgent);
 	
   });
 
@@ -99,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		  )
 		  break;
 		case (screenHeight >= 700 && screenHeight < 750):
-		  dynamicHeight = -47
+		  dynamicHeight = -57
 		  bottomHeight = 55
 		  detailHeight = 35
 		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
