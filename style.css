@@ -72,7 +72,6 @@ img {
     height: 100%;
     display: flex;
     flex-direction: column;
-    padding-bottom: 10px;
 	/* z-index: 2; */
 	background-image: url(./assets/image/bg-navbar.png);
 	background-size: cover;
