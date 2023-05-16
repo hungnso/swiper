@@ -22,6 +22,11 @@ let swiper3 = new Swiper('.swiper3', {
 	 
 
 });
+let swiper4 = new Swiper('.swiper4', {
+	direction: 'vertical', // Cấu hình trượt theo hướng dọc
+	loop: false, // Lặp lại các slide
+	slidesPerView: 5
+ });
 const buttonShow = document.querySelector('.test-touch')
 let userAgent = navigator.userAgent
 const nameTest = document.querySelector('.name-test')
@@ -109,11 +114,11 @@ nameTest.textContent = `${browserName}`
 		case (screenHeight >= 650 && screenHeight < 700):
 	
 				dynamicHeight = -30
-				bottomHeight = 65
+				bottomHeight = 23
 				detailHeight = 40
 				document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + '%');
 				document.documentElement.style.setProperty('--bottom-action', 
-				bottomHeight + 'px' 
+				bottomHeight + '%' 
 				)
 				document.documentElement.style.setProperty('--detail-height', 
 				detailHeight + '%' 
@@ -124,11 +129,11 @@ nameTest.textContent = `${browserName}`
 		  break;
 		case (screenHeight >= 700 && screenHeight < 750):
 		  dynamicHeight = -30
-		  bottomHeight = 55
+		  bottomHeight = 23
 		  detailHeight = 40
 		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + '%');
 		  document.documentElement.style.setProperty('--bottom-action', 
-		  bottomHeight + 'px' 
+		  bottomHeight + '%' 
 		  )
 		  document.documentElement.style.setProperty('--detail-height', 
 		  detailHeight + '%' 
@@ -136,11 +141,11 @@ nameTest.textContent = `${browserName}`
 		  break;
 		case (screenHeight >= 750 && screenHeight < 800):
 		  dynamicHeight = -30
-		  bottomHeight = 45
+		  bottomHeight = 23
 		  detailHeight = 40
 		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + '%');
 		  document.documentElement.style.setProperty('--bottom-action', 
-		  bottomHeight + 'px' 
+		  bottomHeight + '%' 
 		  )
 		  document.documentElement.style.setProperty('--detail-height', 
 		  detailHeight + '%' 
@@ -148,12 +153,12 @@ nameTest.textContent = `${browserName}`
 		  break;
 		case (screenHeight >= 800 && screenHeight < 850):
 		  dynamicHeight = -30
-		  bottomHeight = 35
+		  bottomHeight = 23
 		  detailHeight = 40
 		  console.log(dynamicHeight)
 		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + '%');
 		  document.documentElement.style.setProperty('--bottom-action', 
-		  bottomHeight + 'px' 
+		  bottomHeight + '%' 
 		  )
 		  document.documentElement.style.setProperty('--detail-height', 
 		  detailHeight + '%' 
@@ -161,11 +166,11 @@ nameTest.textContent = `${browserName}`
 		  break;
 		case (screenHeight >= 850 && screenHeight < 900):
 		  dynamicHeight = -30
-		  bottomHeight = 25
+		  bottomHeight = 23
 		  detailHeight = 40
 		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + '%');
 		  document.documentElement.style.setProperty('--bottom-action', 
-		  bottomHeight + 'px' 
+		  bottomHeight + '%' 
 		  )
 		  document.documentElement.style.setProperty('--detail-height', 
 		  detailHeight + '%' 
@@ -175,11 +180,11 @@ nameTest.textContent = `${browserName}`
 		case (screenHeight >= 900 && screenHeight < 950):
 		  
 		  dynamicHeight = -30
-		  bottomHeight = 15
+		  bottomHeight = 23
 		  detailHeight = 40
 		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + '%');
 		  document.documentElement.style.setProperty('--bottom-action', 
-		  bottomHeight + 'px' 
+		  bottomHeight + '%' 
 		  )
 		  document.documentElement.style.setProperty('--detail-height', 
 		  detailHeight + '%' 
@@ -189,11 +194,11 @@ nameTest.textContent = `${browserName}`
 		case (screenHeight >= 950 && screenHeight < 1000):
 		  
 		  dynamicHeight = -30
-		  bottomHeight = 5
+		  bottomHeight = 23
 		  detailHeight = 40
 		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + '%');
 		  document.documentElement.style.setProperty('--bottom-action', 
-		  bottomHeight + 'px' 
+		  bottomHeight + '%' 
 		  )
 		  document.documentElement.style.setProperty('--detail-height', 
 		  detailHeight + '%' 
