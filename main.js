@@ -23,6 +23,7 @@ let swiper3 = new Swiper('.swiper3', {
 
 });
 const buttonShow = document.querySelector('.test-touch')
+let userAgent = navigator.userAgent;
 const detail = document.querySelector('.gallery__overflow')
 const desc = document.querySelector('.info-wrapper')
 const btn = document.querySelector('.btn-wrapper')
@@ -31,7 +32,7 @@ const btnToggle = document.querySelector('.btn-toogle')
 const sidebarContainer = document.querySelector('.sidebar')
 let screenWidth = window.innerWidth
 let screenHeight = window.innerHeight
-let toolbarWidth = window.outerWidth - window.innerWidth;
+let toolbarWidth = window.outerWidth - window.innerWidth
 let dynamicHeight = 0
 let bottomHeight = 0
 let detailHeight = 33%
@@ -41,11 +42,11 @@ let detailHeight = 33%
 /// Khi reszise
 
 /// Khi load lại trang
+console.log(userAgent);
 document.addEventListener('DOMContentLoaded', function() {
 	// Hàm bạn muốn chạy khi trang web được tải vào trong
 	myFunction() 
-	var userAgent = navigator.userAgent;
-console.log(userAgent);
+	
 	
   });
 
@@ -89,16 +90,30 @@ console.log(userAgent);
 		  )
 		  break;
 		case (screenHeight >= 650 && screenHeight < 700):
-		  dynamicHeight = -77
-		  bottomHeight = 65
-		  detailHeight = 32
-		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
-		  document.documentElement.style.setProperty('--bottom-action', 
-		  bottomHeight + 'px' 
-		  )
-		  document.documentElement.style.setProperty('--detail-height', 
-		  detailHeight + '%' 
-		  )
+			if(userAgent.indexOf("Safari") > -1){
+				dynamicHeight = -87
+				bottomHeight = 65
+				detailHeight = 32
+				document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
+				document.documentElement.style.setProperty('--bottom-action', 
+				bottomHeight + 'px' 
+				)
+				document.documentElement.style.setProperty('--detail-height', 
+				detailHeight + '%' 
+				)
+			} else {
+				dynamicHeight = -47
+				bottomHeight = 65
+				detailHeight = 32
+				document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
+				document.documentElement.style.setProperty('--bottom-action', 
+				bottomHeight + 'px' 
+				)
+				document.documentElement.style.setProperty('--detail-height', 
+				detailHeight + '%' 
+				)
+			}
+		
 		  break;
 		case (screenHeight >= 700 && screenHeight < 750):
 		  dynamicHeight = -77
