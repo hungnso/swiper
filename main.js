@@ -109,7 +109,7 @@ nameTest.textContent = `${browserName}`
 	
 				dynamicHeight = -70
 				bottomHeight = 65
-				detailHeight = 32
+				detailHeight = 41
 				document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
 				document.documentElement.style.setProperty('--bottom-action', 
 				bottomHeight + 'px' 
@@ -124,7 +124,7 @@ nameTest.textContent = `${browserName}`
 		case (screenHeight >= 700 && screenHeight < 750):
 		  dynamicHeight = -60
 		  bottomHeight = 55
-		  detailHeight = 35
+		  detailHeight = 41
 		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
 		  document.documentElement.style.setProperty('--bottom-action', 
 		  bottomHeight + 'px' 
@@ -237,7 +237,7 @@ buttonShow.addEventListener('touchmove', function(event) {
 	  if (diffY > 0) {
 
 		// Vuốt lên
-		detail.style.transform = 'translateY(-55%)'
+		detail.style.transform = 'translateY(-80%)'
 		desc.style.opacity = '1'
 			btn.style.opacity = '1'
 		iconShop.style.opacity = '0'
