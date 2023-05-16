@@ -381,6 +381,11 @@ img {
 
 
 @media (min-height: 650px) and (max-height: 700px) {
+	.gallery__thumbnail-wrapper {
+		width: 75px;
+		height: 75px;
+		border-radius: 50%;
+	}
 	.gallery__thumbnail{
 		width: 65px;
 		height: 65px;
