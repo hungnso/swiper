@@ -48,7 +48,6 @@ document.addEventListener('DOMContentLoaded', function() {
 	myFunction() 
 	var userAgent = navigator.userAgent;
 	console.log(userAgent)
-var browserName = "";
 
 if (/Opera|OPR/.test(userAgent)) {
     browserName = "Opera";
@@ -63,7 +62,7 @@ if (/Opera|OPR/.test(userAgent)) {
 } else if (/Trident/.test(userAgent)) {
     browserName = "Internet Explorer";
 }
-nameTest.textContent = `${browserName}`
+nameTest.textContent = `${userAgent}`
 	
   });
 
