@@ -25,6 +25,7 @@ let swiper3 = new Swiper('.swiper3', {
 const buttonShow = document.querySelector('.test-touch')
 let userAgent = navigator.userAgent;
 const detail = document.querySelector('.gallery__overflow')
+const nametest = document.querySelector('.name-test')
 const desc = document.querySelector('.info-wrapper')
 const btn = document.querySelector('.btn-wrapper')
 const iconShop = document.querySelector('.shop-icon')
@@ -90,6 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		  )
 		  break;
 		case (screenHeight >= 650 && screenHeight < 700):
+			nametest.textContent = `${userAgent}`
 			if(userAgent.indexOf("Safari") > -1){
 				dynamicHeight = -87
 				bottomHeight = 65
