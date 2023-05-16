@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		  )
 		  break;
 		case (screenHeight >= 700 && screenHeight < 750):
-		  dynamicHeight = -47
+		  dynamicHeight = -50
 		  bottomHeight = 55
 		  detailHeight = 35
 		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
