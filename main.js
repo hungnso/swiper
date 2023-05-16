@@ -101,7 +101,7 @@ console.log(userAgent);
 		  )
 		  break;
 		case (screenHeight >= 700 && screenHeight < 750):
-		  dynamicHeight = -57
+		  dynamicHeight = -77
 		  bottomHeight = 55
 		  detailHeight = 35
 		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
