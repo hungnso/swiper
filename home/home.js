@@ -247,7 +247,6 @@ buttonShow.addEventListener('touchmove', function(event) {
 	  if (diffY > 0) {
 
 		// Vuốt lên
-		detail.style.transform = 'translateY(-100%)'
 		// desc.style.opacity = '1'
 			// btn.style.opacity = '1'
 			// colorWrapper.style.opacity ='1'
@@ -255,14 +254,17 @@ buttonShow.addEventListener('touchmove', function(event) {
 		detail.style.animation = ""
 		// detail.style.transition = 'transform 0.3s ease-in-out'
 		detail.style.animation = "slide-up 0.5s ease-in-out "
+		detail.style.transform = 'translateY(-100%)'
+
 
 		
 	
 	  } else {
-		detail.style.transform = `translateY(${dynamicHeight}%)`
 		// detail.style.transition = 'transform 0.5s ease-in-out'
 		detail.style.transition = ''
 		detail.style.animation = "slide-down 0.5s ease-in-out "
+		detail.style.transform = `translateY(${dynamicHeight}%)`
+
 	
 		iconShop.style.opacity = '1'
 		
