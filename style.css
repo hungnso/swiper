@@ -221,14 +221,14 @@ img {
 
 }
 .hidden-modal{
-	animation: modal-out 0.5s linear;
+	animation: modal-out 0.5s ;
 	opacity: 0;
 	z-index: 0;
 	visibility: hidden;
 
 }
 .show-modal{
-	animation: modal-in 0.5s linear;
+	animation: modal-in 0.5s ;
 	opacity: 1;
 	z-index: 3;
 }
