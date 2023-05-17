@@ -105,10 +105,10 @@ nameTest.textContent = `${browserName}`
 		case (screenHeight >= 600 && screenHeight < 650):
 		  dynamicHeight = -30
 		  bottomHeight = 23
-		  detailHeight = 39
-		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + 'px');
+		  detailHeight = 40
+		  document.documentElement.style.setProperty('--dynamic-height', dynamicHeight + '%');
 		  document.documentElement.style.setProperty('--bottom-action', 
-		  bottomHeight + 'px' 
+		  bottomHeight + '%' 
 		  )
 		  document.documentElement.style.setProperty('--detail-height', 
 		  detailHeight + '%' 
