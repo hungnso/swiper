@@ -374,7 +374,7 @@ img {
 .btn-wrapper{
 	position: absolute;
   	left: 50%;
-	bottom: 3%;
+	bottom: 10px;
   	transform: translateX(-50%);
 	
 }
@@ -484,7 +484,7 @@ img {
 	font-size: 20px;
 }
 .test-touch{
-	height: 30%;
+	height: 29%;
 }
 
 /*=============== BREAKPOINTS ===============*/
