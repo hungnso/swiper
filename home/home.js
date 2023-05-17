@@ -3,7 +3,7 @@ let swiper1 = new Swiper('.swiper1', {
 	direction: 'vertical', // Cấu hình trượt theo hướng dọc
 	loop: false, // Lặp lại các slide
 	slidesPerView: 5.5,
-	spaceBetween: 30,
+	spaceBetween: 20,
  });
 
  /// swiper của item
