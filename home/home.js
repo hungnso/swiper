@@ -263,12 +263,7 @@ buttonShow.addEventListener('touchmove', function(event) {
 		// detail.style.transition = 'transform 0.5s ease-in-out'
 		detail.style.transition = ''
 		detail.style.animation = "slide-down 0.5s ease-in-out "
-		setTimeout(() => {
-			desc.style.opacity = '0'
-			btn.style.opacity = '0'
-		
-
-		}, 400);
+	
 		iconShop.style.opacity = '1'
 		
 
