@@ -4,9 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
     <link rel="stylesheet" href="style.css" />
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -35,159 +33,25 @@
       integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
       crossorigin="anonymous"
     ></script>
+    <title>Home</title>
   </head>
   <body>
-    <div class="gallery">
-      <aside class="sidebar">
-        <div class="swiper-container swiper1">
-          <div class="swiper-wrapper mt-2 sidebar-item"></div>
+    <div class="wrapper">
+      <div class="list-product d-flex flex-column">
+        <!-- <div class="item-product">
+          <div class="product-name">EYEWEAR</div>
+          <img src="../assets/image/product-1.png" alt="" />
         </div>
-      </aside>
-      <div class="gallery-overview">
-        <div class="modal-container hidden-modal">
-          <div class="mt-1 d-flex justify-content-end">
-            <button class="btn btn-skip">Skip</button>
-          </div>
-          <h2 class="text-center title-modal mt-3">HƯỚNG DẪN SỬ DỤNG</h2>
-          <div class="modal-content-wrapper">
-            <img
-              class="modal-content-img"
-              src="https://images.unsplash.com/photo-1601108691646-d7f0a1e4ba6f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=327&q=80"
-              alt=""
-            />
-            <p class="text-center modal-content-desc mt-4">
-              Point the camera toward the face to let the glass appear
-            </p>
-          </div>
+        <div class="item-product">
+          <div class="product-name">WATCHES</div>
+          <img src="../assets/image/product-2.png" alt="" />
         </div>
-        <div class="overview-header d-flex align-items-center p-1">
-          <div
-            class="header-left text-right col-3 d-flex justify-content-between p-3"
-          >
-            <img
-              class="col-6 header-left-item btn-toogle"
-              src="./assets/image/menu 1.png"
-              alt=""
-            />
-            <img
-              class="col-6 header-left-item btn-modal"
-              src="./assets/image/question 1.png"
-              alt=""
-            />
-          </div>
-          <div class="header-logo col-6 text-center">
-            <img src="./assets/image/image 6.png" alt="" srcset="" />
-          </div>
-          <div class="header-right col-3 p-3 text-end">
-            <img
-              class="col-6 header-left-item"
-              src="./assets/image/refresh 1.png"
-              alt=""
-            />
-          </div>
-        </div>
-
-        <div class="btn-shopping">
-          <img class="img-btn" src="./assets/image/shop-now.svg" alt="" />
-        </div>
-
-        <div class="overview-action d-flex">
-          <div
-            class="col-4 p-4 text-left d-flex align-items-end justify-content-start"
-          >
-            <div class="icon-left d-flex flex-column">
-              <img
-                class="icon-action mb-3"
-                src="./assets/image/camera.png"
-                alt=""
-              />
-              <img class="icon-action" src="./assets/image/move.png" alt="" />
-            </div>
-          </div>
-          <div class="col-4 p-2 d-flex align-items-end justify-content-center">
-            <div
-              class="action-camera-wrapper d-flex align-items-center justify-content-center"
-            >
-              <div class="action-camera"></div>
-            </div>
-          </div>
-          <div
-            class="col-4 text-end d-flex align-items-end justify-content-end"
-            style="padding-right: 3px"
-          >
-            <div class="icon-right-container">
-              <div class="swiper-container swiper4">
-                <div class="swiper-wrapper icon-right"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- =============== SWIPER GALLERY THUMBNAIL =============== -->
-      <div class="gallery__overflow">
-        <div class="gallery-thumbs">
-          <div class="test-touch">
-            <div
-              class="w-100 d-flex justify-content-center align-items-center show-wrapper"
-              style="height: 16px; padding-left: 0; padding-bottom: 10px"
-            >
-              <div class="show-detail"></div>
-            </div>
-
-            <div class="swiper swiper3">
-              <div class="swiper-wrapper list-filter" style="padding: 0"></div>
-            </div>
-            <div class="swiper swiper2" style="height: 92px">
-              <div class="swiper-wrapper item-test"></div>
-            </div>
-          </div>
-          <div class="colors-wrapper d-flex">
-            <div class="col-12">
-              <h3 class="title">
-                Colors:
-                <span class="name-test"></span>
-              </h3>
-              <div class="list-color d-flex align-items-center"></div>
-            </div>
-            <!-- <div class="col-3 shop-icon">
-              <img src="./assets/image/shop-now.svg" alt="" />
-            </div> -->
-          </div>
-          <div class="info-wrapper mt-4 mb-2">
-            <div class="details-wrapper">
-              <h3 class="title">Details:</h3>
-              <ul class="list-color d-flex flex-column align-items-md-center">
-                <li class="detail-item">Fit: Unisex</li>
-                <li class="detail-item">Size & Weight: 52-18-135</li>
-                <li class="detail-item">Lens Material: CR39</li>
-                <li class="detail-item">Frame Material: TR-90</li>
-              </ul>
-            </div>
-            <div class="overview-wrapper mt-3">
-              <h3 class="title">Overview:</h3>
-              <p class="overview-content">
-                High-quality and stylish computer glasses to protect your eyes
-                from Blue Light of digital devices. It will provide you with
-                better sleep and a healthier life. High-quality and stylish
-                computer glasses to protect your eyes from Blue Light of digital
-                devices. It will provide you with better sleep and a healthier
-                life. better sleep and a healthier life. High-quality and
-                stylish computer glasses to protect your eyes from Blue Light of
-                digital devices. It will provide you with better sleep and a
-                healthier life.
-              </p>
-            </div>
-          </div>
-          <div class="btn-wrapper text-center mt-1">
-            <button class="btn-buy-bow">MUA NGAY</button>
-          </div>
-        </div>
+        <div class="item-product">
+          <div class="product-name">EYEWEAR</div>
+          <img src="../assets/image/product-1.png" alt="" />
+        </div> -->
       </div>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-
-    <script src="./main.js"></script>
   </body>
+  <script src="./main.js"></script>
 </html>
