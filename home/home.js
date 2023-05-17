@@ -248,9 +248,9 @@ buttonShow.addEventListener('touchmove', function(event) {
 
 		// Vuốt lên
 		detail.style.transform = 'translateY(-100%)'
-		desc.style.opacity = '1'
-			btn.style.opacity = '1'
-			colorWrapper.style.opacity ='1'
+		// desc.style.opacity = '1'
+			// btn.style.opacity = '1'
+			// colorWrapper.style.opacity ='1'
 		iconShop.style.opacity = '0'
 		detail.style.animation = ""
 		// detail.style.transition = 'transform 0.3s ease-in-out'

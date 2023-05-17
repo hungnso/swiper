@@ -370,7 +370,7 @@ img {
 	height: 12%;
 }
 .info-wrapper{
-	opacity: 0;
+	/* opacity: 0; */
 	height: var(--detail-height);
     overflow-y: scroll;
 }
