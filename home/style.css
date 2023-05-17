@@ -16,7 +16,7 @@
 	--h3-font-size: 1rem;
 	--small-font-size: 0.813rem;
 	--smaller-font-size: 0.75rem;
-	--dynamic-height: 0;
+	--dynamic-height: -30;
 	--bottom-action: 0;
 	--detail-height: 29%;
 	--bg-brow: #730000
@@ -454,6 +454,7 @@ img {
 	font-size: 16px;
 	color: #A3A3A3;
 	transition: transform 0.3s;
+	font-family: 'Barlow', sans-serif;
 	margin-right: 4px;
 	height: 30px !important;
 }
