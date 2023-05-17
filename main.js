@@ -34,8 +34,10 @@ const detail = document.querySelector('.gallery__overflow')
 const desc = document.querySelector('.info-wrapper')
 const btn = document.querySelector('.btn-wrapper')
 const colorWrapper = document.querySelector('.colors-wrapper')
-const iconShop = document.querySelector('.shop-icon')
+const iconShop = document.querySelector('.btn-shopping')
 const btnToggle = document.querySelector('.btn-toogle')
+const btnShowModal = document.querySelector('.btn-modal')
+const btnSkip = document.querySelector('.btn-skip') 
 const sidebarContainer = document.querySelector('.sidebar')
 let screenWidth = window.innerWidth
 let screenHeight = window.innerHeight
@@ -280,6 +282,15 @@ btnToggle.addEventListener('click', function(event){
 	sidebarContainer.classList.remove('hidden')
 	sidebarContainer.classList.add('open')
 	  
+})
+const modalContainer = document.querySelector('.modal-container')
+btnShowModal.addEventListener('click', function(event){
+	modalContainer.classList.remove('hidden-modal')
+	modalContainer.classList.add('show-modal')
+})
+btnSkip.addEventListener('click', function(){
+	modalContainer.classList.remove('show-modal')
+	modalContainer.classList.add('hidden-modal')
 })
 // document.addEventListener('click', function(event) {
 // 	// Kiểm tra xem sự kiện click xảy ra trong hay ngoài thẻ sidebarContainer
