@@ -602,7 +602,7 @@ const listColor2 = [
 		active: false
 	},
 	{
-		color: "bg-warning",
+		color: "bg-brow",
 		active: false
 	},
 	{
@@ -640,9 +640,12 @@ let activeColor = -1
 listColor2.forEach((item, index) => {
 	const iconRightItem = document.createElement('div')
 	iconRightItem.classList.add('swiper-slide', 'icon-right-item')
-
+	
 	const iconColor = document.createElement('div')
-	iconColor.classList.add(`${item.color}`, 'color-item', 'mt-3')
+	iconColor.classList.add(`${item.color}`, 'color-item')
+	if(item.active){
+		iconColor.classList.add('active-color')
+	}
 
 	iconRightItem.appendChild(iconColor)
 	listIconRightContainer.appendChild(iconRightItem)
