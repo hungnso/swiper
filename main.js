@@ -2,7 +2,8 @@
 let swiper1 = new Swiper('.swiper1', {
 	direction: 'vertical', // Cấu hình trượt theo hướng dọc
 	loop: false, // Lặp lại các slide
-	slidesPerView: 5.5
+	slidesPerView: 5.5,
+	spaceBetween: 30,
  });
 
  /// swiper của item
@@ -554,9 +555,14 @@ listNav.forEach((item, index) =>{
 	const navImg = document.createElement('img')
 	navImg.src = item.url
 	navImg.alt = "Hình ảnh "
+	const contentText = document.createElement('div')
+	contentText.classList.add('detail-text')
+	contentText.textContent = 'Blue light'
+
 	
 	contentImg.appendChild(navImg)
 	navContent.appendChild(contentImg)
+	navContent.appendChild(contentText)
 	nav.appendChild(navContent)
 
 	nav.addEventListener('click', () =>{
