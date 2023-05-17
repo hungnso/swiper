@@ -245,12 +245,13 @@ img {
 	color: #303030;
 }
 .modal-content-wrapper{
-	height: 80%;
+	height: 75%;
 	margin-top: 45px;
 }
 .modal-content-img{
 	height: inherit;
 	width: 100%;
+	border-radius: 20px;
 	/* object-fit: cover; */
 
 }
