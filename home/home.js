@@ -55,23 +55,7 @@ let detailHeight = 33%
 document.addEventListener('DOMContentLoaded', function() {
 	// Hàm bạn muốn chạy khi trang web được tải vào trong
 	myFunction() 
-	var userAgent = navigator.userAgent;
-	console.log(userAgent)
-
-if (/Opera|OPR/.test(userAgent)) {
-    browserName = "Opera";
-} else if (/Edg/.test(userAgent)) {
-    browserName = "Microsoft Edge";
-} else if (/Chrome/.test(userAgent)) {
-    browserName = "Chrome";
-} else if (/Safari/.test(userAgent)) {
-    browserName = "Safari";
-} else if (/Firefox/.test(userAgent)) {
-    browserName = "Firefox";
-} else if (/Trident/.test(userAgent)) {
-    browserName = "Internet Explorer";
-}
-nameTest.textContent = `${browserName}`
+	
 	
   });
 
