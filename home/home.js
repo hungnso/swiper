@@ -10,7 +10,7 @@ let swiper1 = new Swiper('.swiper1', {
 let swiper2 = new Swiper('.swiper2', {
 	loop: true,
     slidesPerView: 4.5,
-	spaceBetween: 30,
+	// spaceBetween: 30,
 	// loopedSlides: 1,
 	 
 
