@@ -489,6 +489,7 @@ img {
 }
 .test-touch{
 	height: 29%;
+	width: inherit;
 }
 
 /*=============== BREAKPOINTS ===============*/

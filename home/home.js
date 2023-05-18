@@ -3,14 +3,14 @@ let swiper1 = new Swiper('.swiper1', {
 	direction: 'vertical', // Cấu hình trượt theo hướng dọc
 	loop: false, // Lặp lại các slide
 	slidesPerView: 5.5,
-	spaceBetween: 20,
+	spaceBetween: 30,
  });
 
  /// swiper của item
 let swiper2 = new Swiper('.swiper2', {
 	loop: true,
     slidesPerView: 4.5,
-	// spaceBetween: 30,
+	spaceBetween: 30,
 	// loopedSlides: 1,
 	 
 
@@ -55,12 +55,29 @@ let detailHeight = 33%
 document.addEventListener('DOMContentLoaded', function() {
 	// Hàm bạn muốn chạy khi trang web được tải vào trong
 	myFunction() 
-	
+	var userAgent = navigator.userAgent;
+	console.log(userAgent)
+
+if (/Opera|OPR/.test(userAgent)) {
+    browserName = "Opera";
+} else if (/Edg/.test(userAgent)) {
+    browserName = "Microsoft Edge";
+} else if (/Chrome/.test(userAgent)) {
+    browserName = "Chrome";
+} else if (/Safari/.test(userAgent)) {
+    browserName = "Safari";
+} else if (/Firefox/.test(userAgent)) {
+    browserName = "Firefox";
+} else if (/Trident/.test(userAgent)) {
+    browserName = "Internet Explorer";
+}
+nameTest.textContent = `${browserName}`
 	
   });
 
   
   function myFunction() {
+	console.log('load')
 	switch (true) {
 		case (screenHeight >= 500 && screenHeight < 550):
 		  dynamicHeight = -87
