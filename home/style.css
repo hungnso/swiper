@@ -310,6 +310,7 @@ img {
 }
 .icon-left{
 	height: inherit;
+	transform: translateY(10px);
 }
 
 /* .gallery__thumbnail-img {
